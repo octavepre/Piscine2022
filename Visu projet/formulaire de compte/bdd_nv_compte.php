@@ -11,10 +11,17 @@ if ( isset( $_POST['submit'] ) ) {
     $mdp = $_POST['mdp'];
     $type = $_POST['type'];
 
+    if($db_found){
+        $sql= "INSERT INTO compte (`id`,`Nom`,`Photo de profil`,`Spécialité`,`vidéo`,`CV`,`Courriel`,`Mot de passe`,`type`) VALUES ($id,$Nom,'','','','',$Courriel,$mdp,$type)";
+        $result = mysqli_query($db_handle, $sql);
+        
+        
+        }else{
+            echo "Database not found";
+        }
 }
 
-$sql = "INSERT INTO compte (`id`,`Nom`,`Courriel`,`Mot de passe`,`type`) VALUES ($id,$Nom,$Courriel,$mdp,$type) ";
-   // $resultat = mysqli_query($db_handle, $sql);
+
 
 mysqli_close($db_handle);
 ?>
