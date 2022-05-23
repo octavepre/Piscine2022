@@ -14,7 +14,7 @@ if ( isset( $_POST['submit'] ) ) {
 }
 
 $sql = "INSERT INTO compte (`id`,`Nom`,`Courriel`,`Mot de passe`,`type`) VALUES ($id,$Nom,$Courriel,$mdp,$type) ";
-    $resultat = mysqli_query($db_handle, $sql);
+   // $resultat = mysqli_query($db_handle, $sql);
 
 mysqli_close($db_handle);
 ?>
