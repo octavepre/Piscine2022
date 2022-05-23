@@ -1,0 +1,13 @@
+.carousel-item{
+    height: 400px;
+}
+
+.d-block{
+    /* Regler avec la taille de l'ecran après */
+    margin-top : -300px;
+}
+
+#Caroussel_text{
+    position: absolute;
+    top: 350px; left: 300px;
+}
