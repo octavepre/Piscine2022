@@ -1,3 +1,7 @@
+body{
+    background-color: #242424;
+}
+
 .carousel-item{
     height: 400px;
 }
@@ -10,4 +14,13 @@
 #Caroussel_text{
     position: absolute;
     top: 350px; left: 300px;
+}
+
+#Section{
+    margin-top: 20px;
+    border-radius: 10px;
+    position : absolute;
+    left : 10%;
+    width: 80%;
+    background-color: aliceblue;
 }
