@@ -13,9 +13,25 @@ body{
     margin-top : -15%;
 }
 
+.text 
+{ 
+margin-left: 22px; 
+}
+.text2 
+{ 
+    position: right;
+margin-left: 22px;
+font-size: small;
+}
+.heure{
+    margin-right: 62px;
+}
 #Caroussel_text{
     position: absolute;
-    top: 80%; left: 45%;
+    top: 60%; 
+    left: 15%;
+    color : white;
+    font-size: 25px;
 }
 
 #Section{
@@ -24,7 +40,30 @@ body{
     margin-left : 10%;
     width: 80%;
     background-color: #353535;
+    color : white;  
+}
+
+#Recherche{
+    
+   padding: 2%;
     color : white;
+    font-size: 50px;
+    
+}
+
+#RDV{
+    
+     padding: 2%;
+     color : white;
+     font-size: 20px;
+     
+ }
+ #Annulation{
+    
+    padding: 2%;
+    color :#353535;
+    background-color:white;
+    font-size: 20px;
     
 }
 
@@ -51,6 +90,7 @@ body{
     margin-bottom: 0px;
     width : 100%;
     background-color :darkslategrey;
+    
 }
 
 #col_2{
