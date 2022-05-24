@@ -17,6 +17,29 @@ body{
 { 
 margin-left: 22px; 
 }
+.text3 
+{ 
+    margin-top: 30px;
+font-size: 15px;
+margin-left: 10px;
+}
+
+.text4 
+{ 
+margin-top: 30px;
+font-size: 15px;
+margin-left: 10px;
+float: left;
+}
+
+.bas{
+
+    margin-left: 25%;
+    bottom: 10px;
+
+}
+
+
 .text2 
 { 
     position: right;
@@ -35,6 +58,7 @@ font-size: small;
 }
 
 #Section{
+    
     margin-top: 20px;
     border-radius: 10px;
     margin-left : 10%;
@@ -43,12 +67,67 @@ font-size: small;
     color : white;  
 }
 
-#Recherche{
+#Section2{
     
-   padding: 2%;
+    background-image:url(ImagesCaroussel/Img_car3.jpg);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 400px;
+    position: absolute;
     color : white;
     font-size: 50px;
+    padding: 2%;
     
+}
+
+#Section3{
+    
+    position: relative;
+    margin-top: 15%;
+    border-radius: 10px;
+    margin-left : 10%;
+    width: 80%;
+    height: 300px;
+    background-color: #353535;
+    color : white;  
+}
+
+#Section4{
+
+    position: relative;
+    margin-top: 15%;
+    border-radius: 10px;
+    margin-left : 8%;
+    width: 15%;
+    height: 300px;
+    background-color: #353535;
+    color : white;  
+}
+#Section5{
+
+    position: relative;
+    margin-top: 15%;
+    border-radius: 10px;
+    margin-left : 77%;
+    width: 15%;
+    height: 300px;
+    background-color: #353535;
+    color : white;  
+}
+
+.gauche{
+    float: left;
+  }
+  .droite{
+    float: right;
+  }
+  
+
+#Recherche{
+
+    padding: 2%;
+    color : white;
+    font-size: 50px;   
 }
 
 #RDV{
@@ -67,6 +146,7 @@ font-size: small;
     
 }
 
+
 .wlcm_title{
     margin-top: 2%;
     text-align: center;
@@ -84,12 +164,14 @@ font-size: small;
 }
 
 #footer{
+    
     text-align: center;
     color : white;
     padding: 20px;
     margin-bottom: 0px;
     width : 100%;
     background-color :darkslategrey;
+
     
 }
 
@@ -180,10 +262,43 @@ font-size: small;
     color: rgb(254, 162, 231);
     left : 5%;
     top : 80%;
+    
+}
+
+#btnParc4{
+    border-color: rgb(254, 162, 231);
+    color: rgb(254, 162, 231);
+    left : 5%;
+    top : 80%;
+    float: right;
+    margin-right: 60px;;
+
+}
+
+#btnParc5{
+    border-color: rgb(254, 162, 231);
+    color: rgb(254, 162, 231);
+    left : 5%;
+    top : 40%;
+    float: right;
+    margin-right: 60px;
+    margin-top: 80%;
+
+}
+#btnParc6{
+    border-color: rgb(254, 162, 231);
+    color: rgb(254, 162, 231);
+    left : 5%;
+    top : 40%;
+    float: right;
+    margin-right: 60px;
+    margin-top: 180px;
+
 }
 
 #back{
     background-color: #242424;
+   
 }
 
 #form-label{
