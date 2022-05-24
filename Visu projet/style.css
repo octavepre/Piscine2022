@@ -1,7 +1,9 @@
 body{
     background-color: #242424;
+
     margin: 0%;
     padding: 0%;
+
 }
 
 .carousel-item{
@@ -27,6 +29,7 @@ body{
     color : white;
     
 }
+
 
 .wlcm_title{
     margin-top: 2%;

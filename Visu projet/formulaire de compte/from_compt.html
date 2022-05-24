@@ -4,10 +4,12 @@
 <head>
     <title> Formulaire de création de compte </title>
     <script src="index.js"></script>
+    
 </head>
 
 <body>
-    <form action="creation compte.php" method="post">
+   
+    <form action="bdd_nv_compte.php" method="post">
         <table>
             <tr>
                 <td>ID :</td>
@@ -32,7 +34,9 @@
             <label for="type">Type de compte:</label>
 
             <select name="type" id="type">
-                <option value="">--choisissez une option--</option>
+
+                <option value="">--Choisissez une option--</option>
+
                 <option value="1">Administrateur</option>
                 <option value="2">Professeur</option>
                 <option value="3">Intervenant</option>
@@ -41,7 +45,7 @@
 
             <tr>
                 <td colspan="2" align="left">
-                    <input type="submit" value="Envoyer" />
+                    <input type="submit" name="Envoyer" />
                 </td>
             </tr>
         </table>
