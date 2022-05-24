@@ -149,3 +149,42 @@ body{
 #form-label{
     float: left;
 }
+
+.cropped2 {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+    object-position: center; 
+    border-radius: 50%;
+    /*border: solid 2px rgb(254, 162, 231);*/
+}
+
+.img-circle{
+    background-size : contain;
+    object-fit: fill; 
+}
+
+#SectionEnseignants{
+    position: relative;
+    width: 80%;
+    left: 10%;
+    top : -100px;
+    color :white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.Enseignants{
+    border-radius: 10000px;
+    background-color: #171122;
+    width: 100%;
+    height: auto;
+    border : solid 5px white;
+}
+
+#EnTete{
+    width: 100;
+    height: 300px;
+    background: linear-gradient(-45deg, #8bbae9 ,#FF83CD);
+    margin: 0%;
+}
