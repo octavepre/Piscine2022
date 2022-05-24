@@ -62,9 +62,13 @@ body{
     height: 300px;
     background: linear-gradient(90deg, rgb(150, 114, 141) , rgb(150, 114, 141) , rgb(150, 114, 141) , #242424,#242424);
     left : 10%;
+    width: 90%;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    margin: 60px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .img_Parc{
@@ -80,8 +84,11 @@ body{
     height: 300px;
     background: linear-gradient(-90deg, #8bbae98f , #8bbae98f  , #8bbae98f  , #242424,#242424);
     right : 10%;
+    width: 90%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 
@@ -113,6 +120,18 @@ body{
     color: rgb(159, 255, 255);
     right : 5%;
     top : 80%;
+}
+
+.titlePar1{
+    position:absolute;
+    left : 3%;
+    top : 20%;
+}
+
+.titlePar2{
+    position:absolute;
+    right : 3%;
+    top : 20%;
 }
 
 #btnParc3{
