@@ -1,13 +1,132 @@
+body{
+    background-color: #242424;
+    margin: 0%;
+    padding: 0%;
+}
+
 .carousel-item{
     height: 400px;
 }
 
 .d-block{
     /* Regler avec la taille de l'ecran après */
-    margin-top : -300px;
+    margin-top : -15%;
 }
 
 #Caroussel_text{
     position: absolute;
-    top: 350px; left: 300px;
+    top: 80%; left: 45%;
+}
+
+#Section{
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-left : 10%;
+    width: 80%;
+    background-color: #353535;
+    color : white;
+    
+}
+
+.wlcm_title{
+    margin-top: 2%;
+    text-align: center;
+}
+
+#wlcm_txt{
+    text-align: center;
+}
+
+#wlcm_txt_div{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#footer{
+    text-align: center;
+    color : white;
+    padding: 20px;
+    margin-bottom: 0px;
+    width : 100%;
+    background-color :darkslategrey;
+}
+
+#col_2{
+    text-align: left;
+}
+
+.Cadre{
+    position: relative;
+    height: 300px;
+    background: linear-gradient(90deg, rgb(150, 114, 141) , rgb(150, 114, 141) , rgb(150, 114, 141) , #242424,#242424);
+    left : 10%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 60px;
+}
+
+.img_Parc{
+    float: left;
+    max-height : 100%;
+    object-fit: fill;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.Cadre2{
+    position: relative;
+    height: 300px;
+    background: linear-gradient(-90deg, #8bbae98f , #8bbae98f  , #8bbae98f  , #242424,#242424);
+    right : 10%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+.img_Parc2{
+    float : right;
+    max-height : 100%;
+    object-fit: fill;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#SectionParcour{
+    margin-top: 20px;
+    color : white;
+}
+
+#btnParc1{
+    position:absolute;
+    border-color: rgb(254, 162, 231);
+    color: rgb(254, 162, 231);
+    left : 5%;
+    top : 80%;
+}
+
+#btnParc2{
+    position:absolute;
+    border-color: rgb(159, 255, 255);
+    color: rgb(159, 255, 255);
+    right : 5%;
+    top : 80%;
+}
+
+#btnParc3{
+    position:absolute;
+    border-color: rgb(254, 162, 231);
+    color: rgb(254, 162, 231);
+    left : 5%;
+    top : 80%;
+}
+
+#back{
+    background-color: #242424;
+}
+
+#form-label{
+    float: left;
 }
