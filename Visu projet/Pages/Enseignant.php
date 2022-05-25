@@ -43,7 +43,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <ul class="navbar-nav">
                 <ul>
-                  <a class="nav-item nav-link" href="../index.html">Acceuil
+                  <a class="nav-item nav-link" href="../index.php">Acceuil
                    <span class="sr-only">(current)</span></a>
                 </ul>
                 <ul>
@@ -61,7 +61,7 @@
                   </form>
                 </ul>
                 <ul>       
-                  <a class="nav-item nav-link" href="ConnexionAdmin.html">
+                  <a class="nav-item nav-link" href="ConnexionAdmin.php">
                     Connexion <img id = "user" src="../Icon/32/user-2.png" alt="User" width="32" id="imgECE">
                   </a>
               </ul>

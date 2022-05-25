@@ -23,14 +23,14 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <ul>
-                <a class="nav-item nav-link" href="../index.html">Acceuil
+                <a class="nav-item nav-link" href="../index.php">Acceuil
                  <span class="sr-only">(current)</span></a>
               </ul>
               <ul>
                   <a class="nav-item nav-link active" href="#">Parcourir</a>
               </ul>
               <ul>       
-                  <a class="nav-item nav-link" href="Pages/Rendezvous.html">RDV</a>
+                  <a class="nav-item nav-link" href="Pages/Rendezvous.php">RDV</a>
               </ul>
               
               <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
@@ -41,7 +41,7 @@
                 </form>
               </ul>
               <ul>       
-                <a class="nav-item nav-link" href="ConnexionAdmin.html">
+                <a class="nav-item nav-link" href="ConnexionAdmin.php">
                   Connexion <img id = "user" src="../Icon/32/user-2.png" alt="User" width="32" id="imgECE">
                 </a>
             </ul>
@@ -57,12 +57,12 @@
             <div class="Cadre2">
                 <h4 class="titlePar2">RECHERCHE</h4>
                 <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc2" alt="Car1">
-                <a id="btnParc2" class="btn btn-outline-light my-2 my-sm-0" type="submit"href="Recherche.html">Voir plus</a>
+                <a id="btnParc2" class="btn btn-outline-light my-2 my-sm-0" type="submit"href="Recherche.php">Voir plus</a>
             </div>
             <div class="Cadre">
                 <h4 class="titlePar1">RELATIONS INTERNATIONALES</h4>
                 <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
-                <a id="btnParc3" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="RelationInter.html">Voir plus</a>
+                <a id="btnParc3" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="RelationInter.php">Voir plus</a>
             </div>
         </div>
         

@@ -26,11 +26,11 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <ul>
-            <a class="nav-item nav-link" href="../index.html">Acceuil
+            <a class="nav-item nav-link" href="../index.php">Acceuil
               <span class="sr-only">(current)</span></a>
           </ul>
           <ul>
-            <a class="nav-item nav-link" href="Parcourir.html">Parcourir</a>
+            <a class="nav-item nav-link" href="Parcourir.php">Parcourir</a>
           </ul>
           <ul>
             <a class="nav-item nav-link" href="#">RDV</a>

@@ -31,12 +31,12 @@
               </ul>
               <ul>
                 <li>
-                  <a class="nav-item nav-link" href="Pages/Parcourir.html">Parcourir</a>
+                  <a class="nav-item nav-link" href="Pages/Parcourir.php">Parcourir</a>
                 </li >
               </ul>
               <ul>
                 <li>  
-                  <a class="nav-item nav-link" href="formulaire de compte/from_compt.html">RDV</a>
+                  <a class="nav-item nav-link" href="formulaire de compte/from_compt.php">RDV</a>
                 </li >
               </ul>
 

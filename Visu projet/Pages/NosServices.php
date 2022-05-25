@@ -24,14 +24,14 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <ul>
-                <a class="nav-item nav-link active" href="../index.html">Acceuil</a>
+                <a class="nav-item nav-link active" href="../index.php">Acceuil</a>
               </ul>
               <ul>
-                  <a class="nav-item nav-link" href="Parcourir.html">Parcourir
+                  <a class="nav-item nav-link" href="Parcourir.php">Parcourir
                     <span class="sr-only">(current)</span></a>
               </ul>
               <ul>       
-                  <a class="nav-item nav-link" href="../Rendezvous.html">RDV</a>
+                  <a class="nav-item nav-link" href="../Rendezvous.php">RDV</a>
               </ul>
               
               <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
@@ -42,7 +42,7 @@
                 </form>
               </ul>
               <ul>       
-                <a class="nav-item nav-link" href="ConnexionAdmin.html">
+                <a class="nav-item nav-link" href="ConnexionAdmin.php">
                   Connexion <img id = "user" src="../Icon/32/user-2.png" alt="User" width="32" id="imgECE">
                 </a>
             </ul>
