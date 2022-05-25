@@ -71,47 +71,62 @@
 
         </div>
         <div id="SectionEnseignants">
-            <div class="Enseignants">
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="PhotoID">
-                            <img class="cropped2" src="../Images/THIB.png" alt="logoEdu" id="imgECE">
+          <?php
+          $sql = "SELECT * FROM intervenant";
+          $result = mysqli_query($conn, $sql);
+          while($data = mysqli_fetch_assoc($result)){   
+            $prenom = $data['Prenom'];
+            $nom = $data['Nom'];
+            $tel = $data['telephone'];
+            $mail = $data['Courriel'];
+            $spé = $data['Specialite'];
+            echo"<div class='Enseignants'>
+            <div class='row'>
+              <div class='col-sm'>
+                      <div class='PhotoID'>
+                          <img class='cropped2' src='../Images/THIB.png' alt='logoEdu' id='imgECE'>
+                      </div>
+                  </div>
+                  <div class='col-sm'> <!--Changer la mise en page utiliser tr td th-->
+                      <div class='row'>
+                        <div class='col-sm'>
+                          <h2 class='NameEnsei'>".$prenom." ".$nom." </h2>
+                          <p class='SpecEnsei'><i>".$spé." </i><p>
                         </div>
-                    </div>
-                    <div class="col-sm"> <!--Changer la mise en page utiliser tr td th-->
-                        <h2 href=""> <?php echo $prenom?> <?php echo$nom;?> </h2>
-                        <div class="row">
-                            <div class="col-sm">
-                                <p>Salle : </p>
-                            </div>
-                            <div class="col-sm">
-                                <p>EM015 </p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm">
-                                <p>Telephone : </p>
-                            </div>
-                            <div class="col-sm">
-                                <p><?php echo $tel;?></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm">
-                                <p>Email : </p>
-                            </div>
-                            <div class="col-sm">
-                                <p><?php echo $mail;?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <a class="btn btn-outline-light my-2 my-sm-0" type="submit"href="#">Prendre RDV</a><br>
-                        <a class="btn btn-outline-light my-2 my-sm-0" type="submit"href="#">Contacter</a><br>
-                        <a class="btn btn-outline-light my-2 my-sm-0" type="submit"href="#">Voir son CV</a>
-                    </div>
-                </div>
-            </div>
+                      </div>
+                      <div class='row'>
+                          <div class='col-sm'>
+                              <p>Salle : </p>
+                          </div>
+                          <div class='col-sm'>
+                              <p>EM015 </p>
+                          </div>
+                      </div>
+                      <div class='row'>
+                          <div class='col-sm'>
+                              <p>Telephone : </p>
+                          </div>
+                          <div class='col-sm'>
+                              <p>".$tel." </p>
+                          </div>
+                      </div>
+                      <div class='row'>
+                          <div class='col-sm'>
+                              <p>Email : </p>
+                          </div>
+                          <div class='col-sm'>
+                              <p>".$mail."</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class='col-sm' id='EnseiBtn'>
+                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Prendre RDV</a><br>
+                      <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Contacter</a><br>
+                      <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
+                  </div>
+              </div>
+          </div>";
+          }?>
         </div>
         <div class="container-fluid" id="footer">
           <div class="row">
