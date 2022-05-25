@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="../style.css" rel="stylesheet" type="text/css"/>
   </head>
 
 
@@ -16,7 +16,7 @@
       
         <div class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="logo">
-            <img src="Images/omnes_edu.png" alt="Bootstrap" width="200" id="imgECE">
+            <img src="../Images/omnes_edu.png" alt="Bootstrap" width="200" id="imgECE">
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -40,12 +40,12 @@
               </ul>
               <ul>
                 <li>
-                  <a class="nav-item nav-link" href="Pages/Parcourir.html">Parcourir</a>
+                  <a class="nav-item nav-link" href="../Pages/Parcourir.html">Parcourir</a>
                 </li >
               </ul>
               <ul>
                 <li>  
-                  <a class="nav-item nav-link" href="formulaire de compte/from_compt.html">RDV</a>
+                  <a class="nav-item nav-link" href="../formulaire de compte/from_compt.html">RDV</a>
                 </li >
               </ul>
 
@@ -64,13 +64,13 @@
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-interval="5000">
-              <img src="ImagesCaroussel/Img_car3.jpg" class="d-block w-100" alt="Car1">
+              <img src="../ImagesCaroussel/Img_car3.jpg" class="d-block w-100" alt="Car1">
             </div>
             <div class="carousel-item" data-interval="5000">
-              <img src="ImagesCaroussel/Img_car1.jpg" class="d-block w-100" alt="Car2">
+              <img src="../ImagesCaroussel/Img_car1.jpg" class="d-block w-100" alt="Car2">
             </div>
             <div class="carousel-item" data-interval="5000">
-              <img src="ImagesCaroussel/Img_car2.jpg" class="d-block w-100" alt="Car3">
+              <img src="../ImagesCaroussel/Img_car2.jpg" class="d-block w-100" alt="Car3">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -99,17 +99,17 @@
         <div class="container-fluid" id="footer">
           <div class="row">
             <div class="col-sm">
-              <img src="Images/omnes_edu.png" alt="logoEdu" width="200" id="imgECE">
+              <img src="../Images/omnes_edu.png" alt="logoEdu" width="200" id="imgECE">
             </div>
             <div class="col-sm" id="col_2">
               <ul>
-                <a><img src="Icon/32/call-3.png" alt="telephone" width="32" id="imgPhone"> +33 6 67 15 19 95</a>
+                <a><img src="../Icon/32/call-3.png" alt="telephone" width="32" id="imgPhone"> +33 6 67 15 19 95</a>
               </ul>
               <ul>
-                <a><img src="Icon/32/email-2.png" alt="telephone" width="32" id="imgmail"> +33 6 67 15 19 95</a>
+                <a><img src="../Icon/32/email-2.png" alt="telephone" width="32" id="imgmail"> +33 6 67 15 19 95</a>
               </ul>
               <ul>
-                <a><img src="Icon/32/home-2.png" alt="telephone" width="32" id="imgAdress"> 36 rue Michel Sextius, 75015, Paris</a>
+                <a><img src="../Icon/32/home-2.png" alt="telephone" width="32" id="imgAdress"> 36 rue Michel Sextius, 75015, Paris</a>
               </ul>
             </div>
             <div class="col-sm">
