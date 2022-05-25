@@ -34,7 +34,7 @@
               <ul>       
                   <a class="nav-item nav-link" href="#">RDV</a>-->
 
-                <li> <a class="nav-item nav-link active" href="#">Acceuil
+                <li> <a class="nav-item nav-link active" href="#">Accueil
                  <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
@@ -57,6 +57,15 @@
                  <input class="form-control mr-sm-2" type="search" placeholder="Recherche..." aria-label="Search">
                  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
                 </form>
+              </ul>
+              <ul>
+                <a class="nav-item nav-link" href="MonCompte.php">
+                  <?php
+                  session_start();
+                  if($_SESSION!=null)
+                  {echo $_SESSION['PrenomClientActuel']. " " . $_SESSION['NomClientActuel'];}
+                 ?>
+                 </a>
               </ul>
             </div>
         </div>
