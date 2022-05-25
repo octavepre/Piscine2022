@@ -1,6 +1,6 @@
 <?php
-    //$conn = mysqli_connect('localhost', 'root', '', 'projetweb');
-    $conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+    $conn = mysqli_connect('localhost', 'root', '', 'projetweb');
+    //$conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
     // Check connection
     if (!$conn) {
           die("Échec de la connexion : " . mysqli_connect_error());
