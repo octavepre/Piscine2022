@@ -32,10 +32,10 @@ if(isset($_POST['login']))
                 //ouvrir page client/etudiant
             }
             //echo $data['type'] . ", " . $data['Courriel'] . "<br>";
-            //header('Location : connecté.html') ;*/
+            //header('Location : connecté.php') ;*/
 
             echo "cool raoul " . $data['prenom'];
-            echo "Connexion reussie <br> <a href=\"connecté.html\">ca flex </a>";
+            echo "Connexion reussie <br> <a href=\"connecté.php\">ca flex </a>";
         }
 }
 

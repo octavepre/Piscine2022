@@ -50,7 +50,7 @@
                 </form>
               </ul>
               <ul>       
-                <a class="nav-item nav-link" href="Pages/ConnexionAdmin.html">
+                <a class="nav-item nav-link" href="Pages/ConnexionAdmin.php">
                   Connexion <img id = "user" src="Icon/32/user-2.png" alt="User" width="32" id="imgECE">
                 </a>
             </ul>
