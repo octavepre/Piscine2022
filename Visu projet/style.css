@@ -307,8 +307,8 @@ font-size: small;
 }
 
 .cropped2 {
-    width: 200px; 
-    height: 200px; 
+    width: 250px; 
+    height: 250px; 
     object-fit: cover;
     object-position: center; 
     border-radius: 50%;
@@ -336,6 +336,8 @@ font-size: small;
     width: 100%;
     height: auto;
     border : solid 5px white;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #EnTete{
@@ -343,4 +345,36 @@ font-size: small;
     height: 300px;
     background: linear-gradient(-45deg, #8bbae9 ,#FF83CD);
     margin: 0%;
+}
+
+.NameEnsei{
+    margin-bottom: -8px;
+}
+
+.SpecEnsei{
+    margin-bottom: 10px;
+}
+
+#RdvEnsei{
+    text-align: center;
+    width: 150px;
+    height: auto;
+    border-top: 40px;
+}
+
+#ContactEnsei{
+    text-align: center;
+    width: 150px;
+    height: auto;
+}
+
+#CVEnsei{
+    text-align: center;
+    width: 150px;
+    height: auto;
+    border-top: 40px;
+}
+
+#EnseiBtn{
+    text-align: center;
 }
