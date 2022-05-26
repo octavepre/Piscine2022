@@ -1,21 +1,5 @@
 <?php
-    //$conn = mysqli_connect('localhost', 'root', '', 'projetweb');
-    $conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
-    // Check connection
-    if (!$conn) {
-          die("Échec de la connexion : " . mysqli_connect_error());
-    }
-
-    $sql = "SELECT * FROM intervenant";
-    $result = mysqli_query($conn, $sql);
-
-    while($data = mysqli_fetch_assoc($result))
-    {
-      $prenom = $data['Prenom'];
-      $nom = $data['Nom'];
-      $tel = $data['telephone'];
-      $mail = $data['Courriel'];
-    }
+session_start();
 ?>
 
 <!doctype html>
@@ -60,18 +44,13 @@
                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
                   </form>
                 </ul>
-                <ul class="nav-item dropdown show">       
-                <a class="nav-link btn btn-secondary dropdown-toggle" aria-current="page" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Connexion <img id = "user" src="../Icon/32/user-2.png" alt="User" width="32" id="imgECE">
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-popper="static">
-                  <li>
-                    <a class="dropdown-item" href="SignIn.php">Client</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="ConnexionAdmin.php">Professeur</a>
-                  </li>
-                </ul>
+                <ul>
+                <a class="nav-item nav-link" href="#">
+                  <?php
+                  if($_SESSION!=null)
+                  {echo $_SESSION['PrenomClientActuel']. " " . $_SESSION['NomClientActuel'];}
+                 ?>
+                 </a>
               </ul>
               </div>
         </div>
@@ -79,40 +58,40 @@
 
         </div>
         <div id="SectionEnseignants">
-          <?php
-          $sql = "SELECT * FROM intervenant";
-          $result = mysqli_query($conn, $sql);
-          while($data = mysqli_fetch_assoc($result)){   
-            $prenom = $data['Prenom'];
-            $nom = $data['Nom'];
-            $tel = $data['telephone'];
-            $mail = $data['Courriel'];
-            $spé = $data['Specialite'];
-
-            $photo = $data['Photo de profil'];
-
-            echo"<div class='Enseignants'>
+          <div class='Enseignants'>
             <div class='row'>
               <div class='col-sm'>
                       <div class='PhotoID'>
-
-                          <img class='cropped2' src='".$photo."' alt='logoEdu' id='imgECE'>
-
+                          <img class='cropped2' src='
+                          <?php 
+                            echo $_SESSION['Carte etudianteClientActuel'];
+                            ?>
+                            ' alt='logoEdu' id='imgECE'>
                       </div>
                   </div>
                   <div class='col-sm'> <!--Changer la mise en page utiliser tr td th-->
                       <div class='row'>
                         <div class='col-sm'>
-                          <h2 class='NameEnsei'>".$prenom." ".$nom." </h2>
-                          <p class='SpecEnsei'><i>".$spé." </i><p>
+                          <h2 class='NameEnsei'>
+                              <?php 
+                              echo $_SESSION['PrenomClientActuel'] . " " . $_SESSION['NomClientActuel'];
+                              ?>
+                           </h2>
+                          <p class='SpecEnsei'><i><?php 
+                              echo $_SESSION['MDPClientActuel'] ;
+                              ?> </i><p>
                         </div>
                       </div>
                       <div class='row'>
                           <div class='col-sm'>
-                              <p>Salle : </p>
+                              <p><?php 
+                              echo $_SESSION['AdresseClientActuel'] . " " . $_SESSION['VilleClientActuel'];
+                              ?></p>
                           </div>
                           <div class='col-sm'>
-                              <p>EM015 </p>
+                              <p><?php 
+                              echo $_SESSION['Code postalClientActuel'] . " " . $_SESSION['PaysClientActuel'];
+                              ?> </p>
                           </div>
                       </div>
                       <div class='row'>
@@ -120,7 +99,9 @@
                               <p>Telephone : </p>
                           </div>
                           <div class='col-sm'>
-                              <p>".$tel." </p>
+                              <p><?php 
+                              echo $_SESSION['telephoneClientActuel'] ;
+                              ?> </p>
                           </div>
                       </div>
                       <div class='row'>
@@ -128,18 +109,19 @@
                               <p>Email : </p>
                           </div>
                           <div class='col-sm'>
-                              <p>".$mail."</p>
+                              <p><?php 
+                              echo $_SESSION['mailClientActuel'] ;
+                              ?></p>
                           </div>
                       </div>
                   </div>
                   <div class='col-sm' id='EnseiBtn'>
-                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='PriseDeRdv.php'>Prendre RDV</a><br>
+                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Prendre RDV</a><br>
                       <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Contacter</a><br>
                       <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
                   </div>
               </div>
-          </div>";
-          }?>
+          </div>
         </div>
         <div class="container-fluid" id="footer">
           <div class="row">

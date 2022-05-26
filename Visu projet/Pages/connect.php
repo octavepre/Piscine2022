@@ -13,7 +13,7 @@ if(isset($_POST['login']))
     $prenom = $_POST['prenom'];
     $mdp = $_POST['mdp'];
 
-        $sql="SELECT * FROM compte WHERE Nom =  '" .$nom. "' AND prenom = '" .$prenom."'  AND `Mot de passe` = '" .$mdp."'";
+        $sql="SELECT * FROM intervenant WHERE Nom =  '" .$nom. "' AND prenom = '" .$prenom."'  AND `Mot de passe` = '" .$mdp."'";
         $result = mysqli_query($conn, $sql);
 
         while($data = mysqli_fetch_assoc($result)){
@@ -34,7 +34,7 @@ if(isset($_POST['login']))
             //echo $data['type'] . ", " . $data['Courriel'] . "<br>";
             //header('Location : connecté.php') ;*/
 
-            echo "cool raoul " . $data['prenom'];
+
             echo "Connexion reussie <br> <a href=\"connecté.php\">ca flex </a>";
         }
 }
