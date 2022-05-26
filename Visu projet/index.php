@@ -53,8 +53,10 @@ session_start();
                  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
                 </form>
               </ul>
+
               <ul class="nav-item dropdown show">       
                 <a class="nav-link btn btn-secondary dropdown-toggle" aria-current="page" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
                   Connexion <img id = "user" src="Icon/32/user-2.png" alt="User" width="32" id="imgECE">
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-popper="static">
