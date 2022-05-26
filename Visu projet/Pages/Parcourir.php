@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <ul>
-                <a class="nav-item nav-link" href="../index.php">Acceuil
+                <a class="nav-item nav-link" href="../index.php">Accueil
                  <span class="sr-only">(current)</span></a>
               </ul>
               <ul>
@@ -40,11 +40,19 @@
                  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
                 </form>
               </ul>
-              <ul>       
-                <a class="nav-item nav-link" href="ConnexionAdmin.php">
+              <ul class="nav-item dropdown show">       
+                <a class="nav-link btn btn-secondary dropdown-toggle" aria-current="page" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Connexion <img id = "user" src="../Icon/32/user-2.png" alt="User" width="32" id="imgECE">
                 </a>
-            </ul>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-popper="static">
+                  <li>
+                    <a class="dropdown-item" href="SignIn.php">Client</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="ConnexionAdmin.php">Professeur</a>
+                  </li>
+                </ul>
+              </ul>
             </div>
         </div>
 

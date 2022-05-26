@@ -13,7 +13,7 @@ if(isset($_POST['login']))
     $prenom = $_POST['prenom'];
     $mdp = $_POST['mdp'];
 
-        $sql="SELECT * FROM compte WHERE Nom =  '" .$nom. "' AND prenom = '" .$prenom."'  AND `Mot de passe` = '" .$mdp."'";
+        $sql="SELECT * FROM intervenant WHERE Nom =  '" .$nom. "' AND prenom = '" .$prenom."'  AND `Mot de passe` = '" .$mdp."'";
         $result = mysqli_query($conn, $sql);
 
         while($data = mysqli_fetch_assoc($result)){

@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <ul>
-                <a class="nav-item nav-link" href="../index.php">Acceuil
+                <a class="nav-item nav-link" href="../index.php">Accueil
                  <span class="sr-only">(current)</span></a>
               </ul>
               <ul>
@@ -40,11 +40,19 @@
                  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
                 </form>
               </ul>
-              <ul>       
-                <a class="nav-item nav-link active" href="#">
-                  Connexion <img id = "user" src="../Icon/32/user.png" alt="User" width="32" id="imgECE">
+              <ul class="nav-item dropdown show">       
+                <a class="nav-link btn btn-secondary dropdown-toggle" aria-current="page" role="button" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Connexion <img id = "user" src="../Icon/32/user-2.png" alt="User" width="32" id="imgECE">
                 </a>
-            </ul>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" data-bs-popper="static">
+                  <li>
+                    <a class="dropdown-item" href="SignIn.php">Client</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="ConnexionAdmin.php">Professeur</a>
+                  </li>
+                </ul>
+              </ul>
             </div>
         </div>
         <div id="SectionConAdmin">
@@ -58,25 +66,26 @@
               
                             <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                             <p class="text-white-50 mb-5">Please enter your login and password!</p>
-              
+
+                            <form action="connectClient.php" method="post">
                             <div class="form-outline form-white mb-4">
-                              <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Email..."/>
+                              <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Email..." name="mail"/>
                               <label class="form-label" for="typeEmailX">Email</label>
                             </div>
               
                             <div class="form-outline form-white mb-4">
-                              <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Mot de passe"/>
+                              <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Mot de passe" name="mdp"/>
                               <label class="form-label" for="typePasswordX">Mot de Passe</label>
                             </div>
               
                             <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
               
-                            <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
-              
+                            <button class="btn btn-outline-light btn-lg px-5" type="submit" name="login">Login</button>
+                            </form>
                           </div>
               
                           <div>
-                            <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+                            <p class="mb-0">Don't have an account? <a href="SignUp.php" class="text-white-50 fw-bold">Sign Up</a>
                             </p>
                           </div>
               
