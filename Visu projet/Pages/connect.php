@@ -35,7 +35,7 @@ if(isset($_POST['login']))
             //header('Location : connecté.php') ;*/
 
             echo "cool raoul " . $data['prenom'];
-            echo "Connexion reussie <br> <a href=\"connecté.php\">ca flex </a>";
+            echo "Connexion reussie <br> <a href='connecté.php'>ca flex </a>";
         }
 }
 
