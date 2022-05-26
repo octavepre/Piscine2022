@@ -1,6 +1,6 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', '', 'projetweb');
-    //$conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+    //$conn = mysqli_connect('localhost', 'root', '', 'projetweb');
+    $conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
     // Check connection
     if (!$conn) {
           die("Échec de la connexion : " . mysqli_connect_error());
@@ -80,11 +80,12 @@
             $tel = $data['telephone'];
             $mail = $data['Courriel'];
             $spé = $data['Specialite'];
+            $images = $data['Photo de profil'];
             echo"<div class='Enseignants'>
             <div class='row'>
               <div class='col-sm'>
                       <div class='PhotoID'>
-                          <img class='cropped2' src='../Images/THIB.png' alt='logoEdu' id='imgECE'>
+                          <img class='cropped2' src='".$images."' alt='logoEdu' id='imgECE'>
                       </div>
                   </div>
                   <div class='col-sm'> <!--Changer la mise en page utiliser tr td th-->
@@ -120,7 +121,7 @@
                       </div>
                   </div>
                   <div class='col-sm' id='EnseiBtn'>
-                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Prendre RDV</a><br>
+                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='PriseDeRdv.php'>Prendre RDV</a><br>
                       <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Contacter</a><br>
                       <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
                   </div>
