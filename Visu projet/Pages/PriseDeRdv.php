@@ -1,6 +1,6 @@
 <?php
-    //$conn = mysqli_connect('localhost', 'root', '', 'projetweb');
-    $conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+    $conn = mysqli_connect('localhost', 'root', '', 'projetweb');
+    //$conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
     // Check connection
     if (!$conn) {
           die("Échec de la connexion : " . mysqli_connect_error());
@@ -45,7 +45,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           <ul>
-            <a class="nav-item nav-link" href="../index.php">Acceuil
+            <a class="nav-item nav-link" href="../index.php">Accueil
               <span class="sr-only">(current)</span></a>
           </ul>
           <ul>
@@ -69,18 +69,18 @@
           </ul>
       </div>
     </div>
-    <div id="SectionRDV">
-        <table id="planning">
-            <tr style="text-align : center">
-                <th style="widht:16%">LUNDI</th>
-                <th style="widht:16%">MARDI</th>
-                <th style="widht:16%">MERCREDI</th>
-                <th style="widht:16%">JEUDI</th>
-                <th style="widht:16%">VENDREDI</th>
-                <th style="widht:16%">SAMEDI</th>
+    <div id="SectionRDV" style="width:80%;left:10%">
+        <table id="planning" style="width:100%">
+            <tr style="text-align : center;width:80%">
+                <th style="width:16%;color :white">LUNDI</th>
+                <th style="width:16%;color :white">MARDI</th>
+                <th style="width:16%;color :white">MERCREDI</th>
+                <th style="width:16%;color :white">JEUDI</th>
+                <th style="width:16%;color :white">VENDREDI</th>
+                <th style="width:16%;color :white">SAMEDI</th>
             </tr>
                 <?php
-                $sql = "SELECT * FROM AllHoraire";
+                $sql = "SELECT * FROM allhoraire";
                 $result = mysqli_query($conn, $sql);
             
                 while($data = mysqli_fetch_assoc($result))
@@ -89,10 +89,10 @@
                     $heure = $data['Heure'];
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Lundi' and `Hdébut` = $heure";
+                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Lundi' and `Hdebut` ='". $heure."'";
                     $resultat = mysqli_query($conn, $sql1);
                     if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdébut'] == $heure){
+                        if($data2['Hdebut'] == $heure){
                             echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
                         }
                     }
@@ -101,10 +101,10 @@
                     }
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Mardi' and `Hdébut` = $heure";
+                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Mardi' and `Hdebut` ='". $heure."'";
                     $resultat = mysqli_query($conn, $sql1);
                     if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdébut'] == $heure){
+                        if($data2['Hdebut'] == $heure){
                             echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
                         }
                     }
@@ -113,10 +113,10 @@
                     }
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Mercredi' and `Hdébut` = $heure";
+                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Mercredi' and `Hdebut` ='". $heure."'";
                     $resultat = mysqli_query($conn, $sql1);
                     if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdébut'] == $heure){
+                        if($data2['Hdebut'] == $heure){
                             echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
                         }
                     }
@@ -125,10 +125,10 @@
                     }
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Jeudi' and `Hdébut` = $heure";
+                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Jeudi' and `Hdebut` = '". $heure."'";
                     $resultat = mysqli_query($conn, $sql1);
                     if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdébut'] == $heure){
+                        if($data2['Hdebut'] == $heure){
                             echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
                         }
                     }
@@ -137,10 +137,10 @@
                     }
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Vendredi' and `Hdébut` = $heure";
+                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Vendredi' and `Hdebut` = '". $heure."'";
                     $resultat = mysqli_query($conn, $sql1);
                     if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdébut'] == $heure){
+                        if($data2['Hdebut'] == $heure){
                             echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
                         }
                     }
@@ -149,10 +149,10 @@
                     }
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Samedi' and `Hdébut` = $heure";
+                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Samedi' and `Hdebut` = '". $heure."'";
                     $resultat = mysqli_query($conn, $sql1);
                     if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdébut'] == $heure){
+                        if($data2['Hdebut'] == $heure){
                             echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
                         }
                     }
