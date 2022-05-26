@@ -378,3 +378,18 @@ font-size: small;
 #EnseiBtn{
     text-align: center;
 }
+
+#SectionRDV{
+    position: relative;
+    width: 70%;
+    left: 15%;
+    color :white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#planning{
+    width : 80%;
+    height: auto;
+    color: white;
+}
