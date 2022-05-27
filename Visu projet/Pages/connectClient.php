@@ -37,6 +37,7 @@ if(isset($_POST['login']))
             //header('Location : connecté.php') ;*/
             $nom =$data['Nom'];
             $prenom=$data['Prenom'];
+            $_SESSION['IdClientActuel']= $data['ID'];
             $_SESSION['NomClientActuel']= $nom;
             $_SESSION['PrenomClientActuel']= $prenom;
             $_SESSION['AdresseClientActuel']=$data['Adresse'];

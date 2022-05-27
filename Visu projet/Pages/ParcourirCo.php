@@ -7,20 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="../style.css" rel="stylesheet" type="text/css"/>
   </head>
 
 
   <body>
-        <div class="modal-body">
-            <div class="input-group">
-                <input type="text" name="nom" id="nomModal" class="form-control"  placeholder="Nom">
+    <div class="containerfluid" id="wrapper">
+      <?php require '../HeaderCo.php'; ?>
+
+        <div id="SectionParcour">
+            <div class="Cadre">
+              <h4 class="titlePar1">ENSEIGNEMENT</h4>
+              <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
+              <a id="btnParc1" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="EnseignantCo.php">Voir plus</a>
             </div>
-            <br>
-            <div class="input-group">
-                <input type="text" name="prix" id="prixModal" class="form-control" placeholder="Prix">
+            <div class="Cadre2">
+                <h4 class="titlePar2">RECHERCHE</h4>
+                <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc2" alt="Car1">
+                <a id="btnParc2" class="btn btn-outline-light my-2 my-sm-0" type="submit"href="RechercheCo.php">Voir plus</a>
             </div>
-        </div>     
+            <div class="Cadre">
+                <h4 class="titlePar1">RELATIONS INTERNATIONALES</h4>
+                <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
+                <a id="btnParc3" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="RelationInterCo.php">Voir plus</a>
+            </div>
+        </div>
+        
+      <?php require '../Footer.php'; ?>
+        
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -29,3 +43,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+

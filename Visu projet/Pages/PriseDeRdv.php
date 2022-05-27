@@ -36,42 +36,7 @@
 
 
 <body>
-  <div class="containerfluid" id="wrapper">
-    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="logo">
-        <img src="../Images/omnes_edu.png" alt="Bootstrap" width="200" id="imgECE">
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="navbar-nav">
-          <ul>
-            <a class="nav-item nav-link" href="../index.php">Accueil
-              <span class="sr-only">(current)</span></a>
-          </ul>
-          <ul>
-            <a class="nav-item nav-link" href="Parcourir.php">Parcourir</a>
-          </ul>
-          <ul>
-            <a class="nav-item nav-link" href="#">RDV</a>
-          </ul>
-
-          <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
-          <ul>
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Recherche..." aria-label="Search">
-              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
-            </form>
-          </ul>
-          <ul>
-            <a class="nav-item nav-link active" href="#">
-              Connexion <img id="user" src="../Icon/32/user.png" alt="User" width="32" id="imgECE">
-            </a>
-          </ul>
-      </div>
-    </div>
+    <?php require '../HeaderCo.php'; ?>
     
     <div id="SectionRDV" style="width:80%;left:10%">
       <?php 
@@ -83,7 +48,15 @@
         $nom = $dataProf['Nom'];
         echo"<h4> Table de Rendez-vous de M(me).".$nom."</h4>";
       }
+      
+      echo"<form method='POST' action='ConfiRdvCo.php'>";
+      session_start();
+      if($_SESSION!=null){
+        echo"<input type='hidden' name='idInter' value='".$id."'>
+        <input type='hidden' name='idEleve' value='".$_SESSION['IdClientActuel']."'>";
+      }
       ?>
+      <form method="get" action="">
         <table id="planning" style="width:100%">
             <tr style="text-align : center;width:80%">
                 <th style="width:16%;color :white">LUNDI</th>
@@ -105,16 +78,15 @@
                     $resultat = mysqli_query($conn, $sql1);
                     if($data1 = mysqli_fetch_assoc($resultat)){     
                       echo"<td>
-                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
-                      </button></td>";
-                      
+                      </a></td>";                   
                     }
                     else{                        
                         //echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
                         echo"<td>
                         <label class='btn btn-secondary' style='width:100%'>
-                          <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
+                        <input type='radio' name='rdv' id='option2' style='width:100%' value='".$heure." Lundi'>".$heure."</label></td>";
                     }
 
 
@@ -122,14 +94,14 @@
                     $resultat = mysqli_query($conn, $sql2);
                     if($data2 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
-                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
-                      </button></td>";
+                      </a></td>";
                     }
                     else{
                       echo"<td>
                       <label class='btn btn-secondary' style='width:100%'>
-                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
+                      <input type='radio' name='rdv' id='option2' style='width:100%' value='".$heure." Mardi'>".$heure."</label></td>";
                     }
 
 
@@ -137,14 +109,14 @@
                     $resultat = mysqli_query($conn, $sql3);
                     if($data3 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
-                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
-                      </button></td>";
+                      </a></td>";
                     }
                     else{
                       echo"<td>
                       <label class='btn btn-secondary' style='width:100%'>
-                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
+                      <input type='radio' name='rdv' id='option2' style='width:100%' value='".$heure." Mercredi'>".$heure."</label></td>";
                     }
 
 
@@ -152,14 +124,14 @@
                     $resultat = mysqli_query($conn, $sql4);
                     if($data4 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
-                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
-                      </button></td>";
+                      </a></td>";
                     }
                     else{
                       echo"<td>
                       <label class='btn btn-secondary' style='width:100%'>
-                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
+                      <input type='radio' name='rdv' id='option2' style='width:100%' value='".$heure." Jeudi'>".$heure."</label></td>";
                     }
 
 
@@ -167,14 +139,14 @@
                     $resultat = mysqli_query($conn, $sql5);
                     if($data5 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
-                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
-                      </button></td>";
+                      </a></td>";
                     }
                     else{
                       echo"<td>
                       <label class='btn btn-secondary' style='width:100%'>
-                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
+                      <input type='radio' name='rdv' id='option2' style='width:100%' value='".$heure." Vendredi'>".$heure."</label></td>";
                     }
 
 
@@ -182,21 +154,26 @@
                     $resultat = mysqli_query($conn, $sql6);
                     if($data6 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
-                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
-                      </button></td>";
+                      </a></td>";
                     }
                     else{
                       echo"<td>
                       <label class='btn btn-secondary' style='width:100%'>
-                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
+                        <input type='radio' name='rdv' id='option2' style='width:100%' value='".$heure." Samedi'>".$heure."</label></td>";
                     }
                   echo"</tr>";
                 }
                 ?>
         </table>
+        <input type='submit' style='width:100%' value="Confirmer le Rendez-vous">
+        </form>
     </div>
+
+      <?php require '../Footer.html'; ?>
     </div>
+    
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
