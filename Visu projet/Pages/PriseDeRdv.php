@@ -3,7 +3,10 @@
     //$conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
     // Check connection
     if (!$conn) {
-          die("Échec de la connexion : " . mysqli_connect_error());
+        $conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+        if(!$conn){
+            die("Échec de la connexion : " . mysqli_connect_error());
+        }
     }
     /*$sql = "SELECT * FROM intervenant";
     $result = mysqli_query($conn, $sql);
@@ -69,7 +72,18 @@
           </ul>
       </div>
     </div>
+    
     <div id="SectionRDV" style="width:80%;left:10%">
+      <?php 
+      $id = isset($_POST["id"])? $_POST["id"] : "";
+      $sql0 = "SELECT * FROM `intervenant` WHERE `ID` = $id";
+      $resultName = mysqli_query($conn, $sql0);
+      while($dataProf = mysqli_fetch_assoc($resultName))
+      {
+        $nom = $dataProf['Nom'];
+        echo"<h4> Table de Rendez-vous de M(me).".$nom."</h4>";
+      }
+      ?>
         <table id="planning" style="width:100%">
             <tr style="text-align : center;width:80%">
                 <th style="width:16%;color :white">LUNDI</th>
@@ -80,84 +94,102 @@
                 <th style="width:16%;color :white">SAMEDI</th>
             </tr>
                 <?php
+                
                 $sql = "SELECT * FROM allhoraire";
                 $result = mysqli_query($conn, $sql);
-            
                 while($data = mysqli_fetch_assoc($result))
                 {
                   echo"<tr>";
                     $heure = $data['Heure'];
-
-
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Lundi' and `Hdebut` ='". $heure."'";
+                    $sql1 = "SELECT * FROM `rdv` WHERE `jour` = 'Lundi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql1);
+                    if($data1 = mysqli_fetch_assoc($resultat)){     
+                      echo"<td>
+                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </button></td>";
+                      
+                    }
+                    else{                        
+                        //echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
+                        echo"<td>
+                        <label class='btn btn-secondary' style='width:100%'>
+                          <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
+                    }
+
+
+                    $sql2 = "SELECT * FROM `rdv` WHERE `jour` = 'Mardi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $resultat = mysqli_query($conn, $sql2);
                     if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdebut'] == $heure){
-                            echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
-                        }
+                      echo"<td>
+                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </button></td>";
                     }
                     else{
-                        echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
+                      echo"<td>
+                      <label class='btn btn-secondary' style='width:100%'>
+                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
                     }
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Mardi' and `Hdebut` ='". $heure."'";
-                    $resultat = mysqli_query($conn, $sql1);
-                    if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdebut'] == $heure){
-                            echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
-                        }
-                    }
-                    else{
-                        echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
-                    }
-
-
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Mercredi' and `Hdebut` ='". $heure."'";
-                    $resultat = mysqli_query($conn, $sql1);
-                    if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdebut'] == $heure){
-                            echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
-                        }
+                    $sql3 = "SELECT * FROM `rdv` WHERE `jour` = 'Mercredi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $resultat = mysqli_query($conn, $sql3);
+                    if($data3 = mysqli_fetch_assoc($resultat)){
+                      echo"<td>
+                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </button></td>";
                     }
                     else{
-                        echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
+                      echo"<td>
+                      <label class='btn btn-secondary' style='width:100%'>
+                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
                     }
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Jeudi' and `Hdebut` = '". $heure."'";
-                    $resultat = mysqli_query($conn, $sql1);
-                    if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdebut'] == $heure){
-                            echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
-                        }
-                    }
-                    else{
-                        echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
-                    }
-
-
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Vendredi' and `Hdebut` = '". $heure."'";
-                    $resultat = mysqli_query($conn, $sql1);
-                    if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdebut'] == $heure){
-                            echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
-                        }
+                    $sql4 = "SELECT * FROM `rdv` WHERE `jour` = 'Jeudi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $resultat = mysqli_query($conn, $sql4);
+                    if($data4 = mysqli_fetch_assoc($resultat)){
+                      echo"<td>
+                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </button></td>";
                     }
                     else{
-                        echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
+                      echo"<td>
+                      <label class='btn btn-secondary' style='width:100%'>
+                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
                     }
 
 
-                    $sql1 = "SELECT * FROM `rdv` WHERE `Jour` = 'Samedi' and `Hdebut` = '". $heure."'";
-                    $resultat = mysqli_query($conn, $sql1);
-                    if($data2 = mysqli_fetch_assoc($resultat)){
-                        if($data2['Hdebut'] == $heure){
-                            echo"<td><button class='btn btn-outline-danger my-2 my-sm-0' type='submit' style='width : 100%; pointer-event : none'>".$heure."</button></td>";
-                        }
+                    $sql5 = "SELECT * FROM `rdv` WHERE `jour` = 'Vendredi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $resultat = mysqli_query($conn, $sql5);
+                    if($data5 = mysqli_fetch_assoc($resultat)){
+                      echo"<td>
+                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </button></td>";
                     }
                     else{
-                        echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
+                      echo"<td>
+                      <label class='btn btn-secondary' style='width:100%'>
+                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
+                    }
+
+
+                    $sql6 = "SELECT * FROM `rdv` WHERE `jour` = 'Samedi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $resultat = mysqli_query($conn, $sql6);
+                    if($data6 = mysqli_fetch_assoc($resultat)){
+                      echo"<td>
+                      <button class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </button></td>";
+                    }
+                    else{
+                      echo"<td>
+                      <label class='btn btn-secondary' style='width:100%'>
+                        <input type='radio' name='options' id='option2' style='width:100%'> ".$heure."</label></td>";
                     }
                   echo"</tr>";
                 }

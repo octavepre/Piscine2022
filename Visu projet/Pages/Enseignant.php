@@ -3,7 +3,10 @@
     //$conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
     // Check connection
     if (!$conn) {
-          die("Échec de la connexion : " . mysqli_connect_error());
+        $conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+        if(!$conn){
+            die("Échec de la connexion : " . mysqli_connect_error());
+        }
     }
 
     $sql = "SELECT * FROM intervenant";
@@ -88,7 +91,7 @@
             $tel = $data['telephone'];
             $mail = $data['Courriel'];
             $spé = $data['Specialite'];
-
+            $id = $data['ID'];
             $photo = $data['Photo de profil'];
 
             echo"<div class='Enseignants'>
@@ -133,7 +136,10 @@
                       </div>
                   </div>
                   <div class='col-sm' id='EnseiBtn'>
-                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='PriseDeRdv.php'>Prendre RDV</a><br>
+                      <form action='PriseDeRdv.php' method='post'>
+                        <input type='hidden' name='id' value='".$id."'><br>
+                        <input id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' value='Prendre RDV'>
+                      </form>
                       <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Contacter</a><br>
                       <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
                   </div>
