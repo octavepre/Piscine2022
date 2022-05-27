@@ -13,22 +13,23 @@
 
   <body>
     <div class="containerfluid" id="wrapper">
-      <?php require '../Header.html'; ?>
+      <?php require '../HeaderCo.php'; ?>
+
         <div id="SectionParcour">
             <div class="Cadre">
               <h4 class="titlePar1">ENSEIGNEMENT</h4>
               <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
-              <a id="btnParc1" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="Enseignant.php">Voir plus</a>
+              <a id="btnParc1" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="EnseignantCo.php">Voir plus</a>
             </div>
             <div class="Cadre2">
                 <h4 class="titlePar2">RECHERCHE</h4>
                 <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc2" alt="Car1">
-                <a id="btnParc2" class="btn btn-outline-light my-2 my-sm-0" type="submit"href="Recherche.php">Voir plus</a>
+                <a id="btnParc2" class="btn btn-outline-light my-2 my-sm-0" type="submit"href="RechercheCo.php">Voir plus</a>
             </div>
             <div class="Cadre">
                 <h4 class="titlePar1">RELATIONS INTERNATIONALES</h4>
                 <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
-                <a id="btnParc3" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="RelationInter.php">Voir plus</a>
+                <a id="btnParc3" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="RelationInterCo.php">Voir plus</a>
             </div>
         </div>
         

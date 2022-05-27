@@ -8,67 +8,13 @@
     <!--Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../style.css" rel="stylesheet" type="text/css"/>
+    
   </head>
 
 
   <body>
     <div class="containerfluid" id="wrapper">
-      
-        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="logo">
-            <img src="../Images/omnes_edu.png" alt="Bootstrap" width="200" id="imgECE">
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav">
-              <ul>
-
-<!--                <a class="nav-item nav-link active" href="#">Acceuil
-                 <span class="sr-only">(current)</span></a>
-              </ul>
-              <ul>
-                  <a class="nav-item nav-link" href="Pages/Parcourir.php">Parcourir</a>
-              </ul>
-              <ul>       
-                  <a class="nav-item nav-link" href="#">RDV</a>-->
-
-                <li> <a class="nav-item nav-link active" href="#">Accueil
-                 <span class="sr-only">(current)</span></a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a class="nav-item nav-link" href="../Pages/Parcourir.php">Parcourir</a>
-                </li >
-              </ul>
-              <ul>
-                <li>  
-                  <a class="nav-item nav-link" href="../formulaire de compte/from_compt.php">RDV</a>
-                </li >
-              </ul>
-
-              </ul>
-              
-              <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
-              <ul>
-                <form class="form-inline">
-                 <input class="form-control mr-sm-2" type="search" placeholder="Recherche..." aria-label="Search">
-                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
-                </form>
-              </ul>
-              <ul>
-                <a class="nav-item nav-link" href="MonCompte.php">
-                  <?php
-                  session_start();
-                  if($_SESSION!=null)
-                  {echo $_SESSION['PrenomClientActuel']. " " . $_SESSION['NomClientActuel'];}
-                 ?>
-                 </a>
-              </ul>
-            </div>
-        </div>
+        <?php require '../HeaderCo.php'; ?>
 
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
@@ -105,28 +51,7 @@
           <h2 class="wlcm_title">Bulletin de la Semaine</h2>
         </div>
 
-        <div class="container-fluid" id="footer">
-          <div class="row">
-            <div class="col-sm">
-              <img src="../Images/omnes_edu.png" alt="logoEdu" width="200" id="imgECE">
-            </div>
-            <div class="col-sm" id="col_2">
-              <ul>
-                <a><img src="../Icon/32/call-3.png" alt="telephone" width="32" id="imgPhone"> +33 6 67 15 19 95</a>
-              </ul>
-              <ul>
-                <a><img src="../Icon/32/email-2.png" alt="telephone" width="32" id="imgmail"> +33 6 67 15 19 95</a>
-              </ul>
-              <ul>
-                <a><img src="../Icon/32/home-2.png" alt="telephone" width="32" id="imgAdress"> 36 rue Michel Sextius, 75015, Paris</a>
-              </ul>
-            </div>
-            <div class="col-sm">
-              One of three columns
-            </div>
-          </div>
-        </div>
-        
+        <?php require '../Footer.html'; ?>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

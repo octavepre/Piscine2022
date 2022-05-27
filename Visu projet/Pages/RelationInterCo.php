@@ -13,7 +13,7 @@
 
   <body>
     <div class="containerfluid" id="wrapper">    
-    <?php require '../Header.html'; ?>    
+    <?php require '../HeaderCo.php'; ?>    
     <div id="Section2"> 
       <ul>
         RELATION INTERNATIONNALE 
