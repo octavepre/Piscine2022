@@ -1,5 +1,24 @@
 <?php
-session_start();
+    $conn = mysqli_connect('localhost', 'root', '', 'projetweb');
+    //$conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+    // Check connection
+    if (!$conn) {
+        $conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+        if(!$conn){
+            die("Échec de la connexion : " . mysqli_connect_error());
+        }
+    }
+
+    $sql = "SELECT * FROM intervenant";
+    $result = mysqli_query($conn, $sql);
+
+    while($data = mysqli_fetch_assoc($result))
+    {
+      $prenom = $data['Prenom'];
+      $nom = $data['Nom'];
+      $tel = $data['telephone'];
+      $mail = $data['Courriel'];
+    }
 ?>
 
 <!doctype html>
@@ -14,48 +33,44 @@ session_start();
     <link href="../style.css" rel="stylesheet" type="text/css"/>
   </head>
 
-
+  
   <body>
     <div class="container-fluid" id="wrapper">
     <?php require '../HeaderCo.php'; ?>
-        <div class="container-fluid" id="EnTete">
-
-        </div>
+        <div id='EnTete'></div>
         <div id="SectionEnseignants">
-          <div class='Enseignants'>
+          <?php
+          $sql = "SELECT * FROM intervenant";
+          $result = mysqli_query($conn, $sql);
+          while($data = mysqli_fetch_assoc($result)){   
+            $prenom = $data['Prenom'];
+            $nom = $data['Nom'];
+            $tel = $data['telephone'];
+            $mail = $data['Courriel'];
+            $spé = $data['Specialite'];
+            $id = $data['ID'];
+            $photo = $data['Photo de profil'];
+
+            echo"<div class='Enseignants'>
             <div class='row'>
               <div class='col-sm'>
                       <div class='PhotoID'>
-                          <img class='cropped2' src='
-                          <?php 
-                            echo $_SESSION['Carte etudianteClientActuel'];
-                            ?>
-                            ' alt='logoEdu' id='imgECE'>
+                          <img class='cropped2' src='".$photo."' alt='logoEdu' id='imgECE'>
                       </div>
                   </div>
                   <div class='col-sm'> <!--Changer la mise en page utiliser tr td th-->
                       <div class='row'>
                         <div class='col-sm'>
-                          <h2 class='NameEnsei'>
-                              <?php 
-                              echo $_SESSION['PrenomClientActuel'] . " " . $_SESSION['NomClientActuel'];
-                              ?>
-                           </h2>
-                          <p class='SpecEnsei'><i><?php 
-                              echo $_SESSION['MDPClientActuel'] ;
-                              ?> </i><p>
+                          <h2 class='NameEnsei'>".$prenom." ".$nom." </h2>
+                          <p class='SpecEnsei'><i>".$spé." </i><p>
                         </div>
                       </div>
                       <div class='row'>
                           <div class='col-sm'>
-                              <p><?php 
-                              echo $_SESSION['AdresseClientActuel'] . " " . $_SESSION['VilleClientActuel'];
-                              ?></p>
+                              <p>Salle : </p>
                           </div>
                           <div class='col-sm'>
-                              <p><?php 
-                              echo $_SESSION['Code postalClientActuel'] . " " . $_SESSION['PaysClientActuel'];
-                              ?> </p>
+                              <p>EM015 </p>
                           </div>
                       </div>
                       <div class='row'>
@@ -63,9 +78,7 @@ session_start();
                               <p>Telephone : </p>
                           </div>
                           <div class='col-sm'>
-                              <p><?php 
-                              echo $_SESSION['telephoneClientActuel'] ;
-                              ?> </p>
+                              <p>".$tel." </p>
                           </div>
                       </div>
                       <div class='row'>
@@ -73,19 +86,21 @@ session_start();
                               <p>Email : </p>
                           </div>
                           <div class='col-sm'>
-                              <p><?php 
-                              echo $_SESSION['mailClientActuel'] ;
-                              ?></p>
+                              <p>".$mail."</p>
                           </div>
                       </div>
                   </div>
                   <div class='col-sm' id='EnseiBtn'>
-                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Prendre RDV</a><br>
+                      <form action='PriseDeRdv.php' method='post'>
+                        <input type='hidden' name='id' value='".$id."'><br>
+                        <input id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' value='Prendre RDV'>
+                      </form>
                       <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Contacter</a><br>
                       <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
                   </div>
               </div>
-          </div>
+          </div>";
+          }?>
         </div>
         <?php require '../Footer.html'; ?>
         
