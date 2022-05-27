@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 ?>
 
 <!doctype html>
@@ -78,11 +78,6 @@ session_start();
                               ?></p>
                           </div>
                       </div>
-                  </div>
-                  <div class='col-sm' id='EnseiBtn'>
-                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Prendre RDV</a><br>
-                      <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Contacter</a><br>
-                      <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
                   </div>
               </div>
           </div>

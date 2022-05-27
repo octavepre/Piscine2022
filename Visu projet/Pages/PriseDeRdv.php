@@ -50,7 +50,7 @@
       }
       
       echo"<form method='POST' action='ConfiRdvCo.php'>";
-      session_start();
+      //session_start();
       if($_SESSION!=null){
         echo"<input type='hidden' name='idInter' value='".$id."'>
         <input type='hidden' name='idEleve' value='".$_SESSION['IdClientActuel']."'>";
@@ -74,7 +74,7 @@
                 {
                   echo"<tr>";
                     $heure = $data['Heure'];
-                    $sql1 = "SELECT * FROM `rdv` WHERE `jour` = 'Lundi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $sql1 = "SELECT * FROM `rdv` WHERE `jour` = 'Lundi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql1);
                     if($data1 = mysqli_fetch_assoc($resultat)){     
                       echo"<td>
@@ -90,7 +90,7 @@
                     }
 
 
-                    $sql2 = "SELECT * FROM `rdv` WHERE `jour` = 'Mardi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $sql2 = "SELECT * FROM `rdv` WHERE `jour` = 'Mardi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql2);
                     if($data2 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
@@ -105,7 +105,7 @@
                     }
 
 
-                    $sql3 = "SELECT * FROM `rdv` WHERE `jour` = 'Mercredi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $sql3 = "SELECT * FROM `rdv` WHERE `jour` = 'Mercredi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql3);
                     if($data3 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
@@ -120,7 +120,7 @@
                     }
 
 
-                    $sql4 = "SELECT * FROM `rdv` WHERE `jour` = 'Jeudi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $sql4 = "SELECT * FROM `rdv` WHERE `jour` = 'Jeudi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql4);
                     if($data4 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
@@ -135,7 +135,7 @@
                     }
 
 
-                    $sql5 = "SELECT * FROM `rdv` WHERE `jour` = 'Vendredi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $sql5 = "SELECT * FROM `rdv` WHERE `jour` = 'Vendredi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql5);
                     if($data5 = mysqli_fetch_assoc($resultat)){
                       echo"<td>
@@ -150,7 +150,7 @@
                     }
 
 
-                    $sql6 = "SELECT * FROM `rdv` WHERE `jour` = 'Samedi' and `Hdébut` ='$heure' and `IDIntervenant` ='$id'";
+                    $sql6 = "SELECT * FROM `rdv` WHERE `jour` = 'Samedi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql6);
                     if($data6 = mysqli_fetch_assoc($resultat)){
                       echo"<td>

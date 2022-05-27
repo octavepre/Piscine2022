@@ -14,9 +14,9 @@ if(isset($_POST['login']))
 {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
-    $mdp = $_POST['mdp'];
+    $mail = $_POST['mail'];
 
-        $sql="SELECT * FROM intervenant WHERE Nom =  '" .$nom. "' AND prenom = '" .$prenom."'  AND `Mot de passe` = '" .$mdp."'";
+        $sql="SELECT * FROM administrateur WHERE Nom =  '" .$nom. "' AND prenom = '" .$prenom."'  AND `Courriel` = '" .$mail."'";
         $result = mysqli_query($conn, $sql);
 
         while($data = mysqli_fetch_assoc($result)){
@@ -41,7 +41,7 @@ if(isset($_POST['login']))
             $_SESSION['PrenomClientActuel']=$data['Prenom'];
             $_SESSION['NomClientActuel']=$data['Nom'];
             
-            echo "Connexion reussie <br> <a href=\"connecté.php\">ca flex </a>";
+            echo "Connexion reussie <br> <a href=\"pageAdmin.php\">ca flex </a>";
         }
 }
 

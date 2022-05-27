@@ -29,7 +29,7 @@
                   <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                   <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
-                  <form action="connect.php" method="post">
+                  <form action="connectadmin.php" method="post">
                     <div class="form-outline form-white mb-4">
                       <input type="text" id="nom" class="form-control form-control-lg" placeholder="Nom" name="nom"/>
                       <label class="form-label" for="nom">Nom</label>
@@ -41,9 +41,9 @@
                     </div>
 
                     <div class="form-outline form-white mb-4">
-                      <input type="password" id="typePasswordX" class="form-control form-control-lg"
-                        placeholder="Mot de passe" name="mdp"/>
-                      <label class="form-label" for="typePasswordX">Mot de Passe</label>
+                      <input type="email" id="typePasswordX" class="form-control form-control-lg"
+                        placeholder="Email..." name="mail"/>
+                      <label class="form-label" for="typePasswordX">Email</label>
                     </div>
 
 

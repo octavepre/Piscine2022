@@ -39,10 +39,10 @@ session_start();
                 </li >
               </ul>
               <ul>
-                <li>  
-                  <a class="nav-item nav-link" href="formulaire de compte/from_compt.php">RDV</a>
-                </li >
-              </ul>
+              <li>  
+                <a class="nav-item nav-link" href="Pages/SignIn.php" >RDV</a>
+              </li >
+            </ul>
 
               </ul>
               
@@ -123,7 +123,9 @@ session_start();
               </ul>
             </div>
             <div class="col-sm">
-              One of three columns
+            <ul>
+                <a class="nav-item nav-link" href="Pages/ConnexionReglage.php"> Admin </a>
+              </ul>
             </div>
           </div>
         </div>
