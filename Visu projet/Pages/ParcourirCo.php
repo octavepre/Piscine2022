@@ -20,7 +20,7 @@
 
         <img style="opacity: 0.7" src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
         <h4 class="titlePar1">ENSEIGNEMENT</h4>
-        <a   id="btnParc1" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="Enseignant.php">Voir plus</a>
+        <a   id="btnParc1" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="EnseignantCo.php">Voir plus</a>
         <p style="margin-right: 30%; text-align: center; padding-top: 5%"> Le pôle enseignement vous accueil et son objectif est de vous conduire à l réussite. 
                Ne tardez pas et prenez rendez-vous avec eux pour en apprendre plus ! Au travers de cett section, vous pouvez 
               égalment chatter avec eux ou encore consulter leurs CV

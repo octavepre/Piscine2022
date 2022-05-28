@@ -44,7 +44,7 @@ if (isset($_POST['message'])) {
 	<br><br><br><br><br><br><br>
 	<div>
 	<?php
-	$sql2 = "SELECT * FROM chat WHERE id_inter = '".$id."' AND mail_utilisateur LIKE '%@%' OR mail_utilisateur=(SELECT Nom FROM intervenant WHERE ID='".$id."') ORDER BY id DESC";
+	$sql2 = "SELECT * FROM chat WHERE (id_inter = '".$id."' AND mail_utilisateur='".$_SESSION['mailClientActuel'] ."') OR mail_utilisateur=(SELECT Nom FROM intervenant WHERE ID='".$id."') AND id_inter = '".$_SESSION['IdClientActuel']."' ORDER BY id DESC";
 	$global = mysqli_query($conn, $sql2);
 	while ($msg = mysqli_fetch_assoc($global)) {
 
