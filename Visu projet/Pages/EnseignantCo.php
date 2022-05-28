@@ -90,13 +90,17 @@
                           </div>
                       </div>
                   </div>
-                  <div class='col-sm' id='EnseiBtn'>
-                      <form action='PriseDeRdv.php' method='post'>
-                        <input type='hidden' name='id' value='".$id."'><br>
-                        <input id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' value='Prendre RDV'>                        
-                      </form>
-                      <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' href='indexChat.php?prof=".$id."'>Contacter</a><br>
-                      <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
+                  <div class='col-sm' id='EnseiBtn'>";
+                      if(($spé!= 'Systemes intelligents communicants') && ($spé != 'Mathematiques pour l’ingenierie' ) && ($spé != 'Nanoscience et nanotechnologie pour l’ingenierie'))
+                      {
+                        echo"<form action='PriseDeRdv.php' method='post'>
+                          <input type='hidden' name='id' value='".$id."'><br>
+                          <input id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' value='Prendre RDV'>                        
+                        </form>";
+                      }
+                      echo"
+                        <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' href='indexChat.php?prof=".$id."'>Contacter</a><br>
+                        <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
                   </div>
               </div>
           </div>";

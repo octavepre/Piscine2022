@@ -92,8 +92,12 @@
                           </div>
                       </div>
                   </div>
-                  <div class='col-sm' id='EnseiBtn'>
-                      <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' onclick=\"alert('Connectez-vous pour prendre un RDV')\">Prendre un RDV</a><br>
+                  <div class='col-sm' id='EnseiBtn'>";
+                  if(($spé != 'Systemes intelligents communicants') && ($spé != 'Mathematiques pour l’ingenierie' ) && ($spé != 'Nanoscience et nanotechnologie pour l’ingenierie'))
+                  {
+                    echo" <a id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' onclick=\"alert('Connectez-vous pour prendre un RDV')\">Prendre un RDV</a><br>";
+                  }
+                  echo"
                       <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' onclick=\"alert('Connectez-vous pour contacter un intervenant')\">Contacter</a><br>
                       <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0'>Voir son CV</a>
                   </div>
@@ -101,7 +105,7 @@
           </div>";
           }?>
         </div>
-        <?php require '../Footer.php'; ?>
+        <?php require '../Footer.html'; ?>
         
       </div>
     <!-- Optional JavaScript -->
