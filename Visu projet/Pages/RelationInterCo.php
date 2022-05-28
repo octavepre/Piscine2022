@@ -23,9 +23,9 @@
     <table border="0" id="Section3" >
         <tr>
         <td>
-        <h2 class="text"> Salle: </h2> 
-        <h2 class="text"> Téléphone: </h2>
-        <h2 class="text"> Email: </h2>
+        <h2 class="text"> Salle: P-425</h2> 
+        <h2 class="text"> Téléphone: +33 01 12 13 14 15 </h2>
+        <h2 class="text"> Email: relation-internationale@omnes-intl.fr </h2>
         
         </td>
          <td>
