@@ -33,7 +33,7 @@
               </ul>
               <ul>
                 <li>  
-                  <a class="nav-item nav-link" href="../formulaire de compte/from_compt.php">RDV</a>
+                  <a class="nav-item nav-link" href="../Pages/Rendezvous.php">RDV</a>
                 </li >
               </ul>
 

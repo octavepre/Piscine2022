@@ -169,6 +169,7 @@ session_start();
                <div id="Section" style="color: #353535">  jvne /div>
                </div>
         </div>
+        </div>
 
         <div class="container-fluid" id="footer">
           <div class="row">
@@ -192,7 +193,7 @@ session_start();
               </ul>
             </div>
           </div>
-        </div>
+        
         
     </div>
     <!-- Optional JavaScript -->

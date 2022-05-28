@@ -18,6 +18,14 @@ $db_found = mysqli_select_db($conn, "projetweb");
 if($db_found){
     $sql = "INSERT INTO `rdv`(`IDClient`, `IDIntervenant`, `Hdebut`, `jour`) VALUES ($idCli,$idInt,'$RDVBis[0]','$RDVBis[1]')";
     $result = mysqli_query($conn, $sql);
+    ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+    $from = "octavep00@gmail.com";
+    $to = "prevot.octave@gmail.com";
+    $subject = "Prise de rendez Vous Confirmé";
+    $message = "Le groupe Omnes vous confirme la prise de Rendez vous : $RDVBis[1] à $RDVBis[0]";
+    $headers = "De :" . $from;
+    mail($to,$subject,$message, $headers);
     echo "<script type= 'text/javascript'>alert('Rendez-Vous reservé');</script>";
 }
 else{

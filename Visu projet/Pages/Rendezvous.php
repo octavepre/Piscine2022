@@ -13,98 +13,80 @@
 
   <body>
     <div class="containerfluid" id="wrapper">
-      
     <?php require '../HeaderCo.php'; ?>
-
-        <div id="Recherche" > 
+    
+    <div id="Recherche" > 
             <ul>
                 Vos rendez-vous
-            </ul>
-          
+            </ul>  
+        </div>
+    <div id="RDV">
+    <table border="0" id="Section" >
+    <?php 
+    $conn = mysqli_connect('localhost', 'root', '', 'projetweb');
+    //$conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+    // Check connection
+    if (!$conn) {
+        $conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
+        if(!$conn){
+            die("Échec de la connexion : " . mysqli_connect_error());
+        }
+    }
+    session_start();
+    if($_SESSION!=null)
+    {
+      $id = $_SESSION['IdClientActuel'];
+    }
+    $sql = "SELECT * FROM `rdv` WHERE `IDClient` = $id";
+    $result = mysqli_query($conn, $sql);
+    $compteur = 0;
+    while($data = mysqli_fetch_assoc($result)){  
+      $interID = $data['IDIntervenant'];
+      $sql2 = "SELECT * FROM `intervenant` WHERE `ID` =  $interID";
+      $result2 = mysqli_query($conn, $sql2);
+      if($data2 = mysqli_fetch_assoc($result2))
+      {
+        $PreInter = $data2['Prenom'];
+        $NameInter = $data2['Nom'];
+      }
+      $compteur++;
+      echo"<tr>
+        <td>
+          <input class='text' type='radio' name='choix' value='".$compteur."'> 
+        </td>
+        <td> 
+            <div >
+                 <ul>
+                 ".$data['Jour']."
+                </ul> 
+                <ul class='text2' >
+                    ".$PreInter." ".$NameInter."
+               </ul> 
+
+            </div>        
+        </td>
+        <td>
+            <div align='right' >
+                <ul class= 'heure'>
+                    ".$data['Hdebut']."
+               </ul> 
+           </div>   
+        </td>
+        </tr>";
+    }
+    ?>
+    </table>
     </div>
 
-        <div id="RDV">
-        
-            <table border="0" id="Section" >
-                <tr>
-                <td>
-        <input class="text" type="radio" name="choix" value="1"> 
-    </td>
-            <td> 
-                    <div >
-                         <ul>
-                             Date 1
-                        </ul> 
-                        <ul class="text2" >
-                            Prof cconsulté 
-                       </ul> 
+      <div style="text-align:center">
+        <input  class="btn btn-outline-light my-2 my-sm-0" type="submit" name="button1" value="Annuler ce rendez-vous">
+      </div>
 
-                    </div>        
-                </td>
-                <td>
-                    <div align="right" >
-                        <ul class= "heure">
-                            Heure
-                       </ul> 
-                   </div>   
-                </td>
-                </tr>
-                <tr>
-                <td>
-                    <input class="text" type="radio" name="choix" value="2">  
-                </td>
-                <td> 
-                    <div >
-                        <ul>
-                            Date 2
-                       </ul> <ul class="text2" >
-                        Prof cconsulté 
-                   </ul> 
-
-                </div>        
-            </td>
-            <td>
-                <div align="right" >
-                    <ul class= "heure">
-                        Heure
-                   </ul> 
-               </div>   
-            </td>
-            </tr>
-
-            </table>
-
-
-        </div>
-        
-        <input  class="btn btn-outline-light my-2 my-sm-0" type="submit" name="button1" value="Annuler ce rendez-vous"> </td>
-
-        </div>
+      </div>
 
         <div id="Recherche" ></div>
 
-        <div class="container-fluid" id="footer">
-
-            <div class="row">
-              <div class="col-sm">
-                <img src="../Images/omnes_edu.png" alt="logoEdu" width="200" id="imgECE">
-              </div>
-              <div class="col-sm" id="col_2">
-                <ul>
-                  <a><img src="../Icon/32/call-3.png" alt="telephone" width="32" id="imgPhone"> +33 6 67 15 19 95</a>
-                </ul>
-                <ul>
-                  <a><img src="../Icon/32/email-2.png" alt="telephone" width="32" id="imgmail"> +33 6 67 15 19 95</a>
-                </ul>
-                <ul>
-                  <a><img src="../Icon/32/home-2.png" alt="telephone" width="32" id="imgAdress"> 36 rue Michel Sextius, 75015, Paris</a>
-                </ul>
-              </div>
-              <div class="col-sm">
-                One of three columns
-              </div>
-            </div>
-          </div>
+        <?php require '../Footer.html'; ?>
           
       </div>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
