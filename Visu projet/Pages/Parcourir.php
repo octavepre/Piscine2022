@@ -19,6 +19,9 @@
               <h4 class="titlePar1">ENSEIGNEMENT</h4>
               <img src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
               <a id="btnParc1" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="Enseignant.php">Voir plus</a>
+              <div style="width: 60%; margin-left: 150px">
+              <p id="wlcm_txt" style="font-style: italic; color: white; margin-left: 35%; padding: 15px"> L'enseignement est la section idéale pour dialoguer avec tes professseurs. Que tu sois curieux ou en difficulté, les enseignants sont la pour répondre à tes questions. Tu peux prendre rendez-vous sur des créneaux, ou bien chatter avec eux, ou encore consulter leurs CV. N'hésitez pas, l'enseignement te tends les bras ! </p>
+              </div>            
             </div>
             <div class="Cadre2">
                 <h4 class="titlePar2">RECHERCHE</h4>

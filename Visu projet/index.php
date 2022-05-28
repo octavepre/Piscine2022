@@ -75,12 +75,21 @@ session_start();
           <div class="carousel-inner">
             <div class="carousel-item active" data-interval="5000">
               <img src="ImagesCaroussel/Img_car3.jpg" class="d-block w-100" alt="Car1">
+              <div id="Caroussel_text">
+            <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
+          </div>
             </div>
             <div class="carousel-item" data-interval="5000">
               <img src="ImagesCaroussel/Img_car1.jpg" class="d-block w-100" alt="Car2">
+              <div id="Caroussel_text">
+            <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
+          </div>
             </div>
             <div class="carousel-item" data-interval="5000">
               <img src="ImagesCaroussel/Img_car2.jpg" class="d-block w-100" alt="Car3">
+              <div id="Caroussel_text">
+            <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
+          </div>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -91,19 +100,26 @@ session_start();
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
-          <div id="Caroussel_text">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
-          </div>
+          
         </div>
         
         <div id="Section">
           <h2 class="wlcm_title">Bienvenue à Omnes Education</h2>
-          <h2 class="wlcm_title">Qu'est ce que c'est ?</h2>
+          <ul class="wlcm_title" style="font-size: 28px">Qu'est ce que c'est ?</ul>
           <div id="wlcm_txt_div">
-            <p id="wlcm_txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
-              Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.</p>
-          </div>
+            <p id="wlcm_txt" style="font-style: italic; color: grey" >OMNES Education est une plateforme qui vous mets en relation avec des enseignants et chercheurs reconnus. Vous souhaitez consulter les nouvelles réformes scolaires ? Prendre rendez-vous pour des cours particuliers ? Entamer des démarches à l’étranger ? Tout cela est réalisable grâce à cette plateforme. Vous pouvez vous connecter et accéder directement à vos rendez-vous et planifier votre avenir. Alors n’attendez plus et rejoignez-nous !</div>
           <h2 class="wlcm_title">Bulletin de la Semaine</h2>
+
+        <div id="Section6" class="gauche"> <ul > Lundi  </ul></div>
+        <div id="Section6" class="gauche"> <ul > Mardi </ul></div>
+        <div id="Section6" class="gauche"> <ul > Mercredi  </ul></div>
+        <div id="Section6" class="gauche"> <ul > Jeudi  </ul> </div>
+        <div id="Section7" > <p > Vendredi </p></div>
+
+        </div>
+
+        <div id="Section" > </div>
+
         </div>
 
         <div class="container-fluid" id="footer">
