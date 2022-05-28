@@ -32,7 +32,7 @@
             </div>
         </div>
         
-      <?php require '../Footer.php'; ?>
+      <?php require '../Footer.html'; ?>
         
     </div>
     <!-- Optional JavaScript -->

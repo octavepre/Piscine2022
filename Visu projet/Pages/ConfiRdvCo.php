@@ -16,7 +16,7 @@ $RDVBis = explode(' ', $RDV, 2);
 
 $db_found = mysqli_select_db($conn, "projetweb");
 if($db_found){
-    $sql = "INSERT INTO `rdv`(`IDClient`, `IDIntervenant`, `Hdébut`, `jour`) VALUES ($idCli,$idInt,'$RDVBis[0]','$RDVBis[1]')";
+    $sql = "INSERT INTO `rdv`(`IDClient`, `IDIntervenant`, `Hdebut`, `jour`) VALUES ($idCli,$idInt,'$RDVBis[0]','$RDVBis[1]')";
     $result = mysqli_query($conn, $sql);
     echo "<script type= 'text/javascript'>alert('Rendez-Vous reservé');</script>";
 }

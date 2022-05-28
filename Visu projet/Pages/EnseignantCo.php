@@ -93,9 +93,9 @@
                   <div class='col-sm' id='EnseiBtn'>
                       <form action='PriseDeRdv.php' method='post'>
                         <input type='hidden' name='id' value='".$id."'><br>
-                        <input id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' value='Prendre RDV'>
+                        <input id='RdvEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' value='Prendre RDV'>                        
                       </form>
-                      <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Contacter</a><br>
+                      <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' href='indexChat.php?prof=".$id."'>Contacter</a><br>
                       <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
                   </div>
               </div>

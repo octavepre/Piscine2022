@@ -41,7 +41,7 @@ if(isset($_POST['login']))
             $_SESSION['PrenomClientActuel']=$data['Prenom'];
             $_SESSION['NomClientActuel']=$data['Nom'];
             
-            echo "Connexion reussie <br> <a href=\"connecté.php\">ca flex </a>";
+            echo "Connexion reussie <br> <a href=\"connectéprof.php\">ca flex </a>";
         }
 }
 
