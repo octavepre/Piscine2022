@@ -18,7 +18,7 @@ if (!$conn) {
     $Formations = isset($_POST["Formations"]) ? $_POST["Formations"] : "";
     $Experiences = isset($_POST["Experiences"]) ? $_POST["Experiences"] : "";
     $Diplomes = isset($_POST["Diplomes"]) ? $_POST["Diplomes"] : "";
-    $Date = isset($_POST["Date"]) ? $_POST["Date"] : "";
+    $date = isset($_POST["Date"]) ? $_POST["Date"] : "";
     $Publication = isset($_POST["Publication"]) ? $_POST["Publication"] : "";
     $Nom = isset($_POST["Nom"]) ? $_POST["Nom"] : "";
     $spe = isset($_POST["spe"]) ? $_POST["spe"] : "";
@@ -80,7 +80,7 @@ if (!$conn) {
                 if (mysqli_num_rows($result) != 0) {
                     echo "<p>Book already exists. Duplicates not allowed.</p>"; }
                 else {
-                    $sql = "INSERT INTO cv (Formation, Expérience, Diplômes,Publication, Dates) VALUES( '$Formations', '$Experiences', '$Diplomes', '$Publication', '$Date')";
+                    $sql = "INSERT INTO cv (Formation, Experience, Diplomes,Publication, Dates) VALUES( '$Formations', '$Experiences', '$Diplomes', '$Publication', '$date')";
                     $result = $conn ->query($sql);
                     echo "<p>Add successful.</p>";
         
@@ -101,12 +101,13 @@ if (!$conn) {
                     echo "au top";
                 }
 
-                $sql3="SELECT ID FROM cv WHERE Nom = (SELECT Nom FROM intervenant WHERE Nom ='".$nom."' ";
+                /*$sql3="SELECT ID FROM cv WHERE Nom = (SELECT Nom FROM intervenant WHERE Nom ='".$nom."' ";
                 $resultat=mysqli_query($conn,$sql3);
-                while($trouver = mysqli_fetch_assoc($resultat))
+                if($trouver = mysqli_fetch_assoc($resultat))
                 {
                     $lastsql = "UPDATE intervenant SET cv ='".$trouver."' WHERE Nom='".$nom."'";
                 }    
+              }*/
                 
 
     //Création du XML

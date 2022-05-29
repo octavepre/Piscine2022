@@ -48,9 +48,9 @@ session_start();
               
               <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
               <ul>
-                <form class="form-inline">
-                 <input class="form-control mr-sm-2" type="search" placeholder="Recherche..." aria-label="Search">
-                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
+                <form class="form-inline" action="Pages/Chercher.php" method="post">
+                 <input class="form-control mr-sm-2" type="text" placeholder="Nom ou specialite" name="chercher">
+                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="login">Recherche</button>
                 </form>
               </ul>
 
@@ -236,11 +236,14 @@ session_start();
                 <a><img src="Icon/32/call-3.png" alt="telephone" width="32" id="imgPhone"> +33 6 67 15 19 95</a>
               </ul>
               <ul>
-                <a><img src="Icon/32/email-2.png" alt="telephone" width="32" id="imgmail"> +33 6 67 15 19 95</a>
+                <a><img src="Icon/32/email-2.png" alt="telephone" width="32" id="imgmail"> info@ece.fr</a>
               </ul>
               <ul>
-                <a><img src="Icon/32/home-2.png" alt="telephone" width="32" id="imgAdress"> 36 rue Michel Sextius, 75015, Paris</a>
+                <a><img src="Icon/32/home-2.png" alt="telephone" width="32" id="imgAdress"> 10 rue Michel Sextius, 75015, Paris</a>
               </ul>
+              <p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.372616477147!2d2.2863485148902147!3d48.851104609174946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6701b486bb253%3A0x61e9cc6979f93fae!2s10%20Rue%20Sextius%20Michel%2C%2075015%20Paris!5e0!3m2!1sfr!2sfr!4v1653230919712!5m2!1sfr!2sfr" width="550" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
             </div>
             <div class="col-sm">
             <ul>

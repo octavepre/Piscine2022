@@ -41,9 +41,9 @@
               
               <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
               <ul>
-                <form class="form-inline">
-                 <input class="form-control mr-sm-2" type="search" placeholder="Recherche..." aria-label="Search">
-                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
+              <form class="form-inline" action="ChercherCo.php" method="post">
+                 <input class="form-control mr-sm-2" type="text" placeholder="Nom ou specialite" name="chercher">
+                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="login">Recherche</button>
                 </form>
               </ul>
               <ul>

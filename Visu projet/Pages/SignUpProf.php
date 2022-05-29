@@ -68,27 +68,13 @@
                   <h2 class="fw-bold mb-2 text-uppercase">Nouveau compte</h2>
                   <p class="text-white-50 mb-5">Veuillez remplir tous les champs</p>
 
-                  <form action="NewCompteClient.php" method="post" enctype="multipart/form-data">
+                  <form action="NewCompteProf.php" method="post" enctype="multipart/form-data">
 
                     <div class="form-outline form-white mb-4">
-                      <input type="text" id="nom" class="form-control form-control-lg" placeholder="NOM..." name="nom" />
+                      <input type="text" id="nom" class="form-control form-control-lg" placeholder="NOM..." name="nom_inter" />
                       <label class="form-label" for="nom">Nom</label>
-                      <input type="text" id="prenom" class="form-control form-control-lg" placeholder="Prénom..." name="prenom" />
+                      <input type="text" id="prenom" class="form-control form-control-lg" placeholder="Prénom..." name="prenom_inter" />
                       <label class="form-label" for="prenom">Prenom</label>
-                    </div>
-
-                    <div class="form-outline form-white mb-4">
-                      <input type="text" id="adresse" class="form-control form-control-lg" placeholder="1 rue ..." name="adresse" />
-                      <label class="form-label" for="adresse">Adresse</label>
-                      <input type="text" id="ville" class="form-control form-control-lg" placeholder="Paris..." name="ville" />
-                      <label class="form-label" for="ville">Ville</label>
-                      <input type="number" id="postal" class="form-control form-control-lg" placeholder="75000..." name="postal" />
-                      <label class="form-label" for="postal">Code postal</label>
-                    </div>
-
-                    <div class="form-outline form-white mb-4">
-                      <input type="text" id="Pays" class="form-control form-control-lg" placeholder="France..." name="Pays" />
-                      <label class="form-label" for="Pays">Pays</label>
                     </div>
 
                     <div class="form-outline form-white mb-4">
@@ -102,10 +88,32 @@
                     </div>
 
                     <div class="form-outline form-white mb-4">
-                      <input type="text" id="typePasswordX" class="form-control form-control-lg" placeholder="Mot de passe" name="mdp" />
+                        CV : <br>
+                        <tr>
+                                <td>Formations</td>
+                                <td><input type="text" class="form-control form-control-lg" name="Formations" placeholder="Formations..." size="60"></td> </tr>
+                        <tr>
+                                <td>Experiences</td>
+                                <td><input type="text" class="form-control form-control-lg" name="Experiences" placeholder="Expériences..." size="60"></td> </tr>
+                        <tr>
+                                <td>Diplomes</td>
+                                <td><input type="text" class="form-control form-control-lg" name="Diplomes" placeholder="Diplomes..." size="60"></td> </tr>
+                        <tr>
+                                <td>Date</td>
+                                <td><input type="number" class="form-control form-control-lg" name="Date" placeholder="Date" size="60" value="2022" min="1950" max="2022"></td> </tr>
+                        <tr>
+                                <td>Publications</td>
+                                <td><input type="text" class="form-control form-control-lg" name="Publication" placeholder="Publication" size="60"></td> </tr>
+                        <tr>
+                    </div>
+
+                    <div class="form-outline form-white mb-4" style="padding-top : 30px">
+                     <label class="form-label" for="typePasswordX">Specialite</label>
+                      <input type="text" id="typePasswordX" class="form-control form-control-lg" placeholder="Specialite" name="spe" />
                       <label class="form-label" for="typePasswordX">Mot de Passe</label>
-                      <input type="text" id="typePasswordX" class="form-control form-control-lg" placeholder="Mot de passe" name="conf" />
+                      <input type="text" id="typePasswordX" class="form-control form-control-lg" placeholder="Mot de passe" name="mdp" />
                       <label class="form-label" for="typePasswordX">Confirmer le mot de Passe</label>
+                      <input type="text" id="typePasswordX" class="form-control form-control-lg" placeholder="Mot de passe" name="conf" />
                     </div>
 
                     <button class="btn btn-outline-light btn-lg px-5" type="submit" name="login">Login</button>

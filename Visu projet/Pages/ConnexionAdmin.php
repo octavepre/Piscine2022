@@ -54,7 +54,7 @@
                 </div>
 
                 <div>
-                  <p class="mb-0">Don't have an account? <a href="SignUp.php" class="text-white-50 fw-bold">Sign Up</a>
+                  <p class="mb-0">Don't have an account? <a href="SignUpProf.php" class="text-white-50 fw-bold">Sign Up</a>
                   </p>
                 </div>
 
