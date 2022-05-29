@@ -71,10 +71,6 @@ if (!$conn) {
                     </a></td>";
     } else {
 
-        //Création du XML
-        $xmlFile = new DOMDocument('1.0', 'utf-8');
-        $xmlFile->appendChild($bibliotheque = $xmlFile->createElement('CurriculumVitae'));
-
         $sql = "SELECT * FROM cv"; //avec son titre et auteur
                 if ($Formations != "") {
                 $sql .= " WHERE Formation LIKE '%$Formations%'"; }
@@ -104,22 +100,25 @@ if (!$conn) {
                     echo "au top";
                 }
 
-                /*$sql3="SELECT ID FROM cv WHERE Nom = (SELECT Nom FROM intervenant WHERE Nom ='".$nom."' ";
+                $sql3="SELECT ID FROM cv WHERE Nom = (SELECT Nom FROM intervenant WHERE Nom ='".$nom."' ";
                 $resultat=mysqli_query($conn,$sql3);
                 while($trouver = mysqli_fetch_assoc($resultat))
                 {
                     $lastsql = "UPDATE intervenant SET cv ='".$trouver."' WHERE Nom='".$nom."'";
                  }    
-                mysqli_close($conn);*/
-    }
+                
 
-
+    //Création du XML
+    $xmlFile = new DOMDocument('1.0', 'utf-8');
+    $xmlFile->appendChild($bibliotheque = $xmlFile->createElement('CurriculumVitae'));
     //$sql = "SELECT * FROM CV";
-    $sql1 = "SELECT * FROM CV WHERE ID = $Id ";
+    $sql1 = "SELECT * FROM `cv` WHERE ID = ".$Id." ";
 
-    if (mysqli_query($mysqli, $sql1)) 
+    echo "<?xml version='1.0' encoding='UTF-8'?>";
+    
+    if (mysqli_query($conn, $sql1)) 
     {
-        if($result = $mysqli ->query($sql1))
+        if($result = $conn ->query($sql1))
         {
             if($result -> num_rows >0)
             {
@@ -161,12 +160,13 @@ if (!$conn) {
     }
     else 
     {
-        echo "Erreur : " . $sql1 . "<br>" . mysqli_error($mysqli);
+        echo "Erreur : " . $sql . "<br>" . mysqli_error($mysqli);
     }
     //Ferme la balise ROOT
     echo "</curicculum>";
-    
-    $xmlFile->formatOutput = true;
-    $xmlFile->save("$Id.xml"); //voir si on peut pas juste rentrer le nom et on rajoute .xml
 
+    $xmlFile->formatOutput = true;
+    $xmlFile->save("XMLDoss/$Id.xml"); //voir si on peut pas juste rentrer le nom et on rajoute .xml
+    }
+    mysqli_close($conn);
 ?>
