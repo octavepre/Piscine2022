@@ -436,3 +436,15 @@ font-size: small;
     height : auto;
     background: linear-gradient(-45deg, #004c98 ,#8c0054);
 }
+
+#Inter{
+    text-align: center;
+    width : 50%;
+    left : 25%;
+}
+
+#SectionAdminSupp{
+    width : 100%;
+    height : auto;
+    background: linear-gradient(-45deg, #004c98 ,#8c0054);
+}
