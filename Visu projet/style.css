@@ -210,9 +210,7 @@ font-size: small;
     padding: 20px;
     margin-bottom: 0px;
     width : 100%;
-    background-color :darkslategrey;
-
-    
+    background-color :darkslategrey;  
 }
 
 #col_2{
@@ -431,4 +429,10 @@ font-size: small;
     width : 80%;
     height: auto;
     color: white;
+}
+
+#SectionConAdmin{
+    width : 100%;
+    height : auto;
+    background: linear-gradient(-45deg, #004c98 ,#8c0054);
 }

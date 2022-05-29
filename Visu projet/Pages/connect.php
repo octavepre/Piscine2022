@@ -41,8 +41,10 @@ if(isset($_POST['login']))
             $_SESSION['PrenomClientActuel']=$data['Prenom'];
             $_SESSION['NomClientActuel']=$data['Nom'];
             $_SESSION['IdClientActuel']=$data['ID'];
-            
-            echo "Connexion reussie <br> <a href=\"connectéprof.php\">ca flex </a>";
+            sleep(2);
+            header("Location: http://localhost/Piscine2022/Visu%20projet/Pages/connect%C3%A9prof.php");
+            exit();
+            //echo "Connexion reussie <br> <a href=\"connectéprof.php\">ca flex </a>";
         }
 }
 
