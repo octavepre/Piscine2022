@@ -106,9 +106,6 @@
                                 <td>Publications</td>
                                 <td><input type="text" class="form-control form-control-lg" name="Publication" placeholder="Publication" size="60"></td> </tr>
                         <tr>
-                                <td>Nom</td>
-                                <td><input type="text" class="form-control form-control-lg" name="Nom" placeholder="NOM" size="60"></td> </tr>
-                        <tr>
                     </div>
 
                     <div class="form-outline form-white mb-4" style="padding-top : 30px">

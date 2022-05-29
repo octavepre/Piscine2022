@@ -21,26 +21,26 @@
     }
 ?>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>Index Projet Piscine</title>
-    <!--Required meta tags-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="../style.css" rel="stylesheet" type="text/css"/>
-  </head>
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <title>Index Projet Piscine</title>
+      <!--Required meta tags-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!--Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="../style.css" rel="stylesheet" type="text/css"/>
+    </head>
 
 
-  <body>
-    <div class="container-fluid" id="wrapper">
-    <?php require '../Header.html'; ?>
+    <body>
+      <div class="container-fluid" id="wrapper">
+      <?php require '../Header.html'; ?>
 
-    <div id='EnTete'></div>
-    </div>
-        <div id="SectionEnseignants">
+      <div id='EnTete'></div>
+      </div>
+          <div id="SectionEnseignants">
           <?php
           $sql = "SELECT * FROM intervenant";
           $result = mysqli_query($conn, $sql);
