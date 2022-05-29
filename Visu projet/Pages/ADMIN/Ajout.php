@@ -15,49 +15,52 @@
 <body>
   <div class="containerfluid" id="wrapper">
   <div class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="logo">
-        <img src="../../Images/omnes_edu.png" alt="OmnesLogo" width="200" id="imgECE">
-    </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <ul class="navbar-nav">
-            <ul>
-              <li> <a class="nav-item nav-link" href="Modif.php">Modifier un intervenant
+          <div class="logo">
+            <img src="../../Images/omnes_edu.png" alt="OmnesLogo" width="200" id="imgECE">
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+              <ul>
+                <li> <a class="nav-item nav-link" href="SelectModif.php">Modifier un intervenant
                  <span class="sr-only">(current)</span></a>
                 </li>
-            </ul>
-            <ul>
+              </ul>
+              <ul>
                 <li>
-                  <a class="nav-item nav-link" href="Ajout.php">Ajouter un intervenant</a>
+                  <a class="nav-item nav-link active" href="Ajout.php">Ajouter un intervenant</a>
                 </li >
-            </ul>
-            <ul>
-              <li>  
-                <a class="nav-item nav-link" href="Supp.php">Supprimer un intervenant</a>
-              </li>  
-            </ul>
-          </ul>    
-          <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
-          <ul>
-            <a class="nav-item nav-link" href="MonCompte.php">
-              <?php
-                session_start();
-                if($_SESSION!=null)
-                {echo $_SESSION['PrenomClientActuel']. " " . $_SESSION['NomClientActuel'];}
+              </ul>
+              <ul>
+                <li>  
+                  <a class="nav-item nav-link " href="SelectDel.php">Supprimer un intervenant</a>
+                </li >
+              </ul>
+
+              </ul>
+              
+              <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
+              <ul>
+                <a class="nav-item nav-link" href="MonCompte.php">
+                  <?php
+                  session_start();
+                  if($_SESSION!=null)
+                  {echo $_SESSION['PrenomClientActuel']. " " . $_SESSION['NomClientActuel'];}
                  ?>
-                </a>
-          </ul>
-          <ul>
-              <li>  
-                <a class="nav-item nav-link" href="../index.php"> 
-                  <img id = "user" src="../../Icon/32/deco.jpg" alt="User" width="32" id="imgECE">
-                </a>
-              </li >
-          </ul>
-        </div>
-  </div>
+                 </a>
+              </ul>
+              <ul>
+                <li>  
+                  <a class="nav-item nav-link" href="../../index.php"> 
+                    <img id = "user" src="../../Icon/32/deco.jpg" alt="User" width="32" id="imgECE">
+                  </a>
+                </li >
+              </ul>
+            </div>
+          </div>
+
   <div id="SectionConAdmin" class="containerfluid">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -84,27 +87,39 @@
                     </div>
 
                     <div class="form-outline form-white mb-4">
-                      <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Email..." name="mail" />
+                    <label class="form-label" for="typeEmailX">Email</label>
+                      <select name="dayOff" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" style="width : 100% ; height : 50px ; border-radius : 5px">
+                        <option valeur="Lundi">Lundi</option>
+                        <option valeur="Mardi">Mardi</option>
+                        <option valeur="Mercredi">Mercredi</option>
+                        <option valeur="Jeudi">Jeudi</option>
+                        <option valeur="Vendredi">Vendredi</option>
+                        <option valeur="Samedi">Samedi</option>
+                      </select>
+                    </div>
+
+                    <div class="form-outline form-white mb-4">
                       <label class="form-label" for="typeEmailX">Email</label>
+                      <input type="email" id="typeEmailX" class="form-control form-control-lg" placeholder="Email..." name="mail" />
                     </div>
 
                     <div class="form-outline form-white mb-4">
                         CV : <br>
                         <tr>
-                                <td>Formations</td>
-                                <td><input type="text" class="form-control form-control-lg" name="Formations" placeholder="Formations..." size="60"></td> </tr>
+                          <td>Formations</td>
+                          <td><input type="text" class="form-control form-control-lg" name="Formations" placeholder="Formations..." size="60"></td> </tr>
                         <tr>
-                                <td>Experiences</td>
-                                <td><input type="text" class="form-control form-control-lg" name="Experiences" placeholder="Expériences..." size="60"></td> </tr>
+                          <td>Experiences</td>
+                          <td><input type="text" class="form-control form-control-lg" name="Experiences" placeholder="Expériences..." size="60"></td> </tr>
                         <tr>
-                                <td>Diplomes</td>
-                                <td><input type="text" class="form-control form-control-lg" name="Diplomes" placeholder="Diplomes..." size="60"></td> </tr>
+                          <td>Diplomes</td>
+                          <td><input type="text" class="form-control form-control-lg" name="Diplomes" placeholder="Diplomes..." size="60"></td> </tr>
                         <tr>
-                                <td>Date</td>
-                                <td><input type="number" class="form-control form-control-lg" name="Date" placeholder="Date" size="60" value="2022" min="1950" max="2022"></td> </tr>
+                          <td>Date</td>
+                          <td><input type="number" class="form-control form-control-lg" name="Date" placeholder="Date" size="60" value="2022" min="1950" max="2022"></td> </tr>
                         <tr>
-                                <td>Publications</td>
-                                <td><input type="text" class="form-control form-control-lg" name="Publication" placeholder="Publication" size="60"></td> </tr>
+                          <td>Publications</td>
+                          <td><input type="text" class="form-control form-control-lg" name="Publication" placeholder="Publication" size="60"></td> </tr>
                         <tr>
                     </div>
 
@@ -119,6 +134,9 @@
 
                     <button class="btn btn-outline-light btn-lg px-5" type="submit" name="login">Login</button>
                   </form>
+                  <div style="text-align:center ; padding : 20px">
+                    <a class="btn btn-outline-light btn-lg px-5" href="../pageAdmin.php">Retour</a>
+                  </div>
                 </div>
 
               </div>

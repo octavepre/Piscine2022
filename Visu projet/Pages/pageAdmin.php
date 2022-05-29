@@ -36,7 +36,7 @@ if (!$conn) {
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <ul>
-                <li> <a class="nav-item nav-link" href="ADMIN/Modif.php">Modifier un intervenant
+                <li> <a class="nav-item nav-link" href="ADMIN/SelectModif.php">Modifier un intervenant
                  <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
@@ -47,7 +47,7 @@ if (!$conn) {
               </ul>
               <ul>
                 <li>  
-                  <a class="nav-item nav-link" href="ADMIN/Supp.php">Supprimer un intervenant</a>
+                  <a class="nav-item nav-link" href="ADMIN/SelectDel.php">Supprimer un intervenant</a>
                 </li >
               </ul>
 
@@ -75,7 +75,7 @@ if (!$conn) {
           
         
         <div id="Section" style="text-align : center ; padding:20px">
-          <a class="btn btn-light my-2 my-sm-0" href="ADMIN/Modif.php" style="margin-top : 20px; width : 250px">
+          <a class="btn btn-light my-2 my-sm-0" href="ADMIN/SelectModif.php" style="margin-top : 20px; width : 250px">
             Modifier un intervenant
           </a><br><br>
 
@@ -83,7 +83,7 @@ if (!$conn) {
             Ajouter un intervenant
           </a><br><br>
 
-          <a class="btn btn-light my-2 my-sm-0" href="ADMIN/Supp.php" style="margin-top : 20px; width : 250px">
+          <a class="btn btn-light my-2 my-sm-0" href="ADMIN/SelectDel.php" style="margin-top : 20px; width : 250px">
             Supprimer un intervenant
           </a><br>
         </div>

@@ -10,7 +10,7 @@ if (!$conn) {
     }
 }
 
-$id=$_GET['prof'];
+$id = isset($_POST["choix"])? $_POST["choix"] : "";
 
 $sql="DELETE FROM intervenant WHERE ID = '".$id."'";
 if(mysqli_query($conn,$sql))

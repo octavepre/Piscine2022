@@ -22,6 +22,7 @@ if (!$conn) {
     $Publication = isset($_POST["Publication"]) ? $_POST["Publication"] : "";
     $Nom = isset($_POST["Nom"]) ? $_POST["Nom"] : "";
     $spe = isset($_POST["spe"]) ? $_POST["spe"] : "";
+    $dayOff = isset($_POST["dayOff"]) ? $_POST["dayOff"] : "";
 
     /*$Id=0;
     $sql5 = "SELECT * FROM `intervenant`";
@@ -94,7 +95,7 @@ if (!$conn) {
                     }
                 }
                 echo "allo";
-                $sql2 = "INSERT INTO `intervenant` (`Nom`,`Prenom`,`telephone`,`specialite`,`courriel`,`Mot de passe`,`cv`) VALUES ('" . $nom . "','" . $prenom . "','" . $tel . "','".$spe."','" . $mail . "','" . $mdp . "',".$Id.")";
+                $sql2 = "INSERT INTO `intervenant` (`Nom`,`Prenom`,`telephone`,`specialite`,`courriel`,`Mot de passe`,`cv`,`dayoff`) VALUES ('" . $nom . "','" . $prenom . "','" . $tel . "','".$spe."','" . $mail . "','" . $mdp . "',".$Id.",'".$dayOff."')";
                 $result2 = mysqli_query($conn, $sql2);
                 if ($result2) {
                     echo "au top";
@@ -105,7 +106,8 @@ if (!$conn) {
                 if($trouver = mysqli_fetch_assoc($resultat))
                 {
                     $lastsql = "UPDATE intervenant SET cv ='".$trouver."' WHERE Nom='".$nom."'";
-                 }    */
+                }    
+              }*/
                 
 
     //Création du XML

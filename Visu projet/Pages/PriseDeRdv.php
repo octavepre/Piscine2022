@@ -69,6 +69,12 @@
                 
                 $sql = "SELECT * FROM allhoraire";
                 $result = mysqli_query($conn, $sql);
+                $sql3 = "SELECT * FROM `intervenant` WHERE `ID` = '$id'";
+                $result3 = mysqli_query($conn, $sql3);
+                if($data3 = mysqli_fetch_assoc($result3))
+                {
+                  $do = $data3['dayoff'];
+                }
                 while($data = mysqli_fetch_assoc($result))
                 {
                   echo"<tr>";
@@ -81,6 +87,13 @@
                         ".$heure."
                       </a></td>";                   
                     }
+                    else if($do == "Lundi")
+                    {
+                      echo"<td>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </a></td>";
+                    }
                     else{                        
                         //echo"<td><button class='btn btn-outline-light my-2 my-sm-0' type='submit' style='width : 100%;'>".$heure."</button></td>";
                         echo"<td>
@@ -92,6 +105,13 @@
                     $sql2 = "SELECT * FROM `rdv` WHERE `jour` = 'Mardi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql2);
                     if($data2 = mysqli_fetch_assoc($resultat)){
+                      echo"<td>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </a></td>";
+                    }
+                    else if($do == "Mardi")
+                    {
                       echo"<td>
                       <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
@@ -112,6 +132,13 @@
                         ".$heure."
                       </a></td>";
                     }
+                    else if($do == "Mercredi")
+                    {
+                      echo"<td>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </a></td>";
+                    }
                     else{
                       echo"<td>
                       <label class='btn btn-secondary' style='width:100%'>
@@ -122,6 +149,13 @@
                     $sql4 = "SELECT * FROM `rdv` WHERE `jour` = 'Jeudi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql4);
                     if($data4 = mysqli_fetch_assoc($resultat)){
+                      echo"<td>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </a></td>";
+                    }
+                    else if($do == "Jeudi")
+                    {
                       echo"<td>
                       <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
@@ -142,6 +176,13 @@
                         ".$heure."
                       </a></td>";
                     }
+                    else if($do == "Vendredi")
+                    {
+                      echo"<td>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </a></td>";
+                    }
                     else{
                       echo"<td>
                       <label class='btn btn-secondary' style='width:100%'>
@@ -152,6 +193,13 @@
                     $sql6 = "SELECT * FROM `rdv` WHERE `jour` = 'Samedi' and `Hdebut` ='$heure' and `IDIntervenant` ='$id'";
                     $resultat = mysqli_query($conn, $sql6);
                     if($data6 = mysqli_fetch_assoc($resultat)){
+                      echo"<td>
+                      <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
+                        ".$heure."
+                      </a></td>";
+                    }
+                    else if($do == "Samedi")
+                    {
                       echo"<td>
                       <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Cette horaire est déjà réservée\")'>
                         ".$heure."
