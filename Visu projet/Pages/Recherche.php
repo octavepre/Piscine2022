@@ -27,21 +27,21 @@
                 
             <div class="carousel-inner">
               <div class="carousel-item active" data-interval="5000">
-                <img src="../ImagesCaroussel/Img_car3.jpg" class="d-block w-100" alt="Car1">
+                <img style="opacity: 0.6" src="../Images/SystemeIntCom.jpg" class="d-block w-100" alt="Car1">
                 <div id="Caroussel_text">
                     <h1> Systèmes Intelligents Communicants </h1>
                   <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
                 </div>
               </div>
               <div class="carousel-item" data-interval="5000">
-                <img src="../ImagesCaroussel/Img_car1.jpg" class="d-block w-100" alt="Car2">
+                <img style="opacity: 0.6" src="../Images/Maths.jpg" class="d-block w-100" alt="Car2">
                 <div id="Caroussel_text">
                     <h1> Mathématiques pour l’ingénierie </h1>
                   <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
                 </div>
               </div>
               <div class="carousel-item" data-interval="5000">
-                <img src="../ImagesCaroussel/Img_car2.jpg" class="d-block w-100" alt="Car3">
+                <img style="opacity: 0.6" src="../Images/nanotech.jpg" class="d-block w-100" alt="Car3">
                 <div id="Caroussel_text">
                     <h1> Nanoscience et nanotechnologie pour l’ingénierie </h1>
                   <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
