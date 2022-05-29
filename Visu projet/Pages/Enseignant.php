@@ -53,7 +53,8 @@
             $id = $data['ID'];
             $photo = $data['Photo de profil'];
 
-
+            if($spé != "Mathematiques pour l ingenierie" && $spé != "Systemes intelligents communicants" && $spé != "Nanoscience et nanotechnologie pour l ingenierie")
+            {
             echo"<div class='Enseignants'>
             <div class='row'>
               <div class='col-sm'>
@@ -103,7 +104,7 @@
                       <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' href='InfoProf.php?prof=".$id."'>Plus d'informations</a>
                   </div>
               </div>
-          </div>";
+          </div>";}
           }?>
         </div>
         <?php require '../Footer.html'; ?>

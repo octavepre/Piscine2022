@@ -41,7 +41,9 @@ if(isset($_POST['login']))
             $_SESSION['PrenomClientActuel']=$data['Prenom'];
             $_SESSION['NomClientActuel']=$data['Nom'];
             
-            echo "Connexion reussie <br> <a href=\"pageAdmin.php\">ca flex </a>";
+            sleep(2);
+            header("Location: http://localhost/Piscine2022/Visu%20projet/Pages/pageAdmin.php");
+            exit();
         }
 }
 
