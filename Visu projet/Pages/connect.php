@@ -40,8 +40,9 @@ if(isset($_POST['login']))
             //echo "cool raoul " . $data['Prenom'];
             $_SESSION['PrenomClientActuel']=$data['Prenom'];
             $_SESSION['NomClientActuel']=$data['Nom'];
+            $_SESSION['IdClientActuel']=$data['ID'];
             
-            //echo "Connexion reussie <br> <a href=\"connectéprof.php\">ca flex </a>";
+            echo "Connexion reussie <br> <a href=\"connectéprof.php\">ca flex </a>";
         }
 }
 
