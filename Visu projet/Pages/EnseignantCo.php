@@ -100,7 +100,7 @@
                       }
                       echo"
                         <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit' href='indexChat.php?prof=".$id."'>Contacter</a><br>
-                        <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' type='submit'href='#'>Voir son CV</a>
+                        <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' href='InfoProf.php?prof=".$id."'>Plus d'informations</a>
                   </div>
               </div>
           </div>";

@@ -53,6 +53,7 @@
             $id = $data['ID'];
             $photo = $data['Photo de profil'];
 
+
             echo"<div class='Enseignants'>
             <div class='row'>
               <div class='col-sm'>
@@ -99,7 +100,7 @@
                   }
                   echo"
                       <a id='ContactEnsei' class='btn btn-outline-light my-2 my-sm-0' onclick=\"alert('Connectez-vous pour contacter un intervenant')\">Contacter</a><br>
-                      <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0'>Voir son CV</a>
+                      <a id='CVEnsei' class='btn btn-outline-light my-2 my-sm-0' href='InfoProf.php?prof=".$id."'>Plus d'informations</a>
                   </div>
               </div>
           </div>";

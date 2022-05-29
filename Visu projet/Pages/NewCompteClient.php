@@ -7,43 +7,6 @@ if (!$conn) {
       die("Échec de la connexion : " . mysqli_connect_error());
 }
 
-function transfert(){
-    $ret        = false;
-    $img_blob   = '';
-    $img_taille = 0;
-    $img_type   = '';
-    $img_nom    = '';
-    $taille_max = 250000;
-    $ret        = is_uploaded_file($_FILES['fic']['tmp_name']);
-    
-    if (!$ret) {
-        echo "Problème de transfert";
-        return false;
-    } else {
-        // Le fichier a bien été reçu
-        $img_taille = $_FILES['fic']['size'];
-        
-        if ($img_taille > $taille_max) {
-            echo "Trop gros !";
-            return false;
-        }
-
-        $img_type = $_FILES['fic']['type'];
-        $img_nom  = $_FILES['fic']['name'];
-        $img_blob = file_get_contents ($_FILES['fic']['tmp_name']);
-        $img_blob = file_get_contents ($_FILES['fic']['tmp_name']);
-        $req = "INSERT INTO images (" . 
-                                "img_nom, img_taille, img_type, img_blob " .
-                                ") VALUES (" .
-                                "'" . $img_nom . "', " .
-                                "'" . $img_taille . "', " .
-                                "'" . $img_type . "', " .
-                                "'" . addslashes ($img_blob) . "') ";
-        $ret = mysql_query ($req) or die (mysql_error ());
-        return true;
-    }
-}
-
 if(isset($_POST['login']))
 {
     $nom = $_POST['nom'];
@@ -52,51 +15,75 @@ if(isset($_POST['login']))
     $ville = $_POST['ville'];
     $postal = $_POST['postal'];
     $pays = $_POST['Pays'];
-    $carte = $_POST['carte'];
     $tel = $_POST['telephone'];
     $mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
+    $confirm= $_POST['conf'];
 
     if($nom == '')
     {
-        error();
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+            </a></td>";
     }
     else if($prenom == '')
     {
-        error();
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+            </a></td>";
     }
     else if($adresse == '')
     {
-        error();
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+            </a></td>";
     }
     else if($ville == '')
     {
-        error();
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+            </a></td>";
     }
     else if($postal == '')
     {
-        error();
+        echo"<td>
+        <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+    </a></td>";
     }
     else if($pays == '')
     {
-        error();
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+            </a></td>";
     }
     else if($tel == '')
     {
-        error();
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+            </a></td>";
     }
     else if($mail == '')
     {
-        error();
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+            </a></td>";
     }
     else if($mdp == '')
     {
-        error();
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Champ(s) manquant(s)\")'>
+            </a></td>";
+    }
+    else if($mdp != $confirm)
+    {
+        echo"<td>
+                <a class='btn btn-danger' style='width:100% ; height:62px; margin-top:-8px' onclick='alert(\"Mot de passe incorrect\")'>
+            </a></td>";
     }
     else {
-
-        echo $carte; 
-        $sql= "INSERT INTO `compte` (`ID`,`Nom`,`Prenom`,`Adresse`,`Ville`,`Code postal`,`Pays`,`telephone`,`Carte etudiante`,`courriel`,`Mot de passe`) VALUES ('3','" . $nom . "','" . $prenom . "','" . $adresse . "','" . $ville . "','" . $postal . "','" .$pays. "','" .$tel. "','../Images/".$carte. "','" .$mail. "','" . $mdp . "')";
+ 
+        echo "allo";
+        $sql= "INSERT INTO `client` (`Nom`,`Prenom`,`Adresse`,`Ville`,`Code postal`,`Pays`,`telephone`,`Carte etudiante`,`courriel`,`Mot de passe`) VALUES ('" . $nom . "','" . $prenom . "','" . $adresse . "','" . $ville . "','" . $postal . "','" .$pays. "','" .$tel. "',' ','" .$mail. "','" . $mdp . "')";
 
         if (mysqli_query($conn, $sql))
         {
@@ -105,5 +92,3 @@ if(isset($_POST['login']))
         mysqli_close($conn);
     }
 }
-
-?>

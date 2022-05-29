@@ -49,7 +49,7 @@ if (isset($_POST['message'])) {
 	while ($msg = mysqli_fetch_assoc($global)) {
 
 	?>
-		<b> <?php echo "<a style=\"color:white\">" . $msg['mail_utilisateur'] . "</a>" ?> </b> : <?php echo "<a style=\"color:white\">" . $msg['message'] . "</a>" ?> <br />
+		<b> <?php echo "<a style=\"color:white\">" . $msg['mail_utilisateur'] . " : </a>" ?> </b>  <?php echo "<a style=\"color:white\">" . $msg['message'] . "</a>" ?> <br />
 	<?php
 	}
 	?>

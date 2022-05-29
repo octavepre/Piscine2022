@@ -32,7 +32,6 @@
             die("Échec de la connexion : " . mysqli_connect_error());
         }
     }
-    session_start();
     if($_SESSION!=null)
     {
       $id = $_SESSION['IdClientActuel'];

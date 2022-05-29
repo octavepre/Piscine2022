@@ -1,5 +1,4 @@
 <?php
-session_start();
 $conn = mysqli_connect('localhost', 'root', '', 'projetweb');
 //$conn = mysqli_connect('localhost', 'root', 'root', 'projetweb');
 // Check connection
@@ -25,11 +24,11 @@ if (!$conn) {
 
 
   <body>
-    <div class="containerfluid" id="wrapper">
+  <div class="containerfluid" id="wrapper">
       
-        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="logo">
-            <img src="Images/omnes_edu.png" alt="Bootstrap" width="200" id="imgECE">
+            <img src="../Images/omnes_edu.png" alt="OmnesLogo" width="200" id="imgECE">
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,23 +36,24 @@ if (!$conn) {
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <ul>
-
-                <li> <a class="nav-item nav-link active" href="#">Accueil
+                <li> <a class="nav-item nav-link" href="ADMIN/Modif.php">Modifier un intervenant
                  <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
-              
+              <ul>
+                <li>
+                  <a class="nav-item nav-link" href="ADMIN/Ajout.php">Ajouter un intervenant</a>
+                </li >
+              </ul>
+              <ul>
+                <li>  
+                  <a class="nav-item nav-link" href="ADMIN/Supp.php">Supprimer un intervenant</a>
+                </li >
+              </ul>
 
               </ul>
               
               <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
-              <ul>
-                <form class="form-inline">
-                 <input class="form-control mr-sm-2" type="search" placeholder="Recherche..." aria-label="Search">
-                 <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Recherche</button>
-                </form>
-              </ul>
-
               <ul>
                 <a class="nav-item nav-link" href="MonCompte.php">
                   <?php
@@ -71,48 +71,30 @@ if (!$conn) {
                 </li >
               </ul>
             </div>
-        </div>
-
+          </div>
+          
         
         <div id="Section">
           <a href="ADMIN/Modif.php">
-            Modifier les paramètres d'un intervenant
+            Modifier un intervenant
           </a>
+          <br><br>
 
           <a href="ADMIN/Ajout.php">
             Ajouter un intervenant
           </a>
+          <br><br>
 
           <a href="ADMIN/Supp.php">
             Supprimer un intervenant
           </a>
+          <br><br>
         </div>
 
-        <div class="container-fluid" id="footer">
-          <div class="row">
-            <div class="col-sm">
-              <img src="Images/omnes_edu.png" alt="logoEdu" width="200" id="imgECE">
-            </div>
-            <div class="col-sm" id="col_2">
-              <ul>
-                <a><img src="Icon/32/call-3.png" alt="telephone" width="32" id="imgPhone"> +33 6 67 15 19 95</a>
-              </ul>
-              <ul>
-                <a><img src="Icon/32/email-2.png" alt="telephone" width="32" id="imgmail"> +33 6 67 15 19 95</a>
-              </ul>
-              <ul>
-                <a><img src="Icon/32/home-2.png" alt="telephone" width="32" id="imgAdress"> 36 rue Michel Sextius, 75015, Paris</a>
-              </ul>
-            </div>
-            <div class="col-sm">
-            <ul>
-                <a class="nav-item nav-link" href="ConnexionReglage.php"> Admin </a>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
+                
     </div>
+
+    <?php require '../Footer.html'; ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
