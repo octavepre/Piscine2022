@@ -23,6 +23,7 @@ if (!$conn) {
     $Nom = isset($_POST["Nom"]) ? $_POST["Nom"] : "";
     $spe = isset($_POST["spe"]) ? $_POST["spe"] : "";
     $dayOff = isset($_POST["dayOff"]) ? $_POST["dayOff"] : "";
+    $IDProf=0;
 
     /*$Id=0;
     $sql5 = "SELECT * FROM `intervenant`";
@@ -98,6 +99,7 @@ if (!$conn) {
                 $sql2 = "INSERT INTO `intervenant` (`Nom`,`Prenom`,`telephone`,`specialite`,`courriel`,`Mot de passe`,`cv`,`dayoff`) VALUES ('" . $nom . "','" . $prenom . "','" . $tel . "','".$spe."','" . $mail . "','" . $mdp . "',".$Id.",'".$dayOff."')";
                 $result2 = mysqli_query($conn, $sql2);
                 if ($result2) {
+                    
                     echo "au top";
                 }
 
@@ -170,5 +172,11 @@ if (!$conn) {
     $xmlFile->formatOutput = true;
     $xmlFile->save("XMLDoss/$Id.xml"); //voir si on peut pas juste rentrer le nom et on rajoute .xml
     }
+    session_start();
+    $_SESSION['PrenomClientActuel']=$prenom;
+    $_SESSION['NomClientActuel']=$nom;
+    sleep(2);
+    header("Location: http://localhost/Piscine2022/Visu%20projet/Pages/connect%c3%a9prof.php");
+    exit();
     mysqli_close($conn);
 ?>

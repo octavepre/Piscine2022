@@ -89,6 +89,13 @@ if(isset($_POST['login']))
         {
             echo "au top";
         }
+        sleep(2);
+        session_start();
+        $_SESSION['PrenomClientActuel']=$prenom;
+        $_SESSION['NomClientActuel']=$nom;
+        header("Location: http://localhost/Piscine2022/Visu%20projet/Pages/connect%c3%a9.php");
+        exit();
         mysqli_close($conn);
     }
+    
 }
