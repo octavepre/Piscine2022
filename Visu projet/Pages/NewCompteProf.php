@@ -172,11 +172,8 @@ if (!$conn) {
     $xmlFile->formatOutput = true;
     $xmlFile->save("XMLDoss/$Id.xml"); //voir si on peut pas juste rentrer le nom et on rajoute .xml
     }
-    session_start();
-    $_SESSION['PrenomClientActuel']=$prenom;
-    $_SESSION['NomClientActuel']=$nom;
     sleep(2);
-    header("Location: http://localhost/Piscine2022/Visu%20projet/Pages/connect%c3%a9prof.php");
+    header("Location: http://localhost/Piscine2022/Visu%20projet/index.php");
     exit();
     mysqli_close($conn);
 ?>
