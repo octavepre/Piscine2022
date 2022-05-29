@@ -50,7 +50,10 @@ if(isset($_POST['login']))
             $_SESSION['MDPClientActuel']=$data['Mot de passe'];
             /*echo $_SESSION['PrenomClientActuel'];
             echo "cool raoul " . $data['Prenom'];*/
-            echo "Connexion reussie <br> <a href=\"connecté.php\">ca flex </a>";
+            sleep(2);
+            header("Location: http://localhost/Piscine2022/Visu%20projet/Pages/connect%c3%a9.php");
+            exit();
+            //echo "Connexion reussie <br> <a href=\"connecté.php\">ca flex </a>";
         }
 }
 

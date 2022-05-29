@@ -21,6 +21,7 @@
             </ul>  
         </div>
     <div id="RDV">
+    <form method='POST' action='AnnuleRdvClient.php'>
     <table border="0" id="Section" >
     <?php 
     $conn = mysqli_connect('localhost', 'root', '', 'projetweb');
@@ -41,6 +42,7 @@
     $compteur = 0;
     while($data = mysqli_fetch_assoc($result)){  
       $interID = $data['IDIntervenant'];
+      $IDrendezVous = $data['ID'];
       $sql2 = "SELECT * FROM `intervenant` WHERE `ID` =  $interID";
       $result2 = mysqli_query($conn, $sql2);
       if($data2 = mysqli_fetch_assoc($result2))
@@ -51,7 +53,7 @@
       $compteur++;
       echo"<tr>
         <td>
-          <input class='text' type='radio' name='choix' value='".$compteur."'> 
+          <input class='text' type='radio' name='choix' value='".$IDrendezVous."'> 
         </td>
         <td> 
             <div >
@@ -78,9 +80,9 @@
     </div>
 
       <div style="text-align:center">
-        <input  class="btn btn-outline-light my-2 my-sm-0" type="submit" name="button1" value="Annuler ce rendez-vous">
+        <input  class="btn btn-outline-light my-2 my-sm-0" type="submit" name="button1" value="Annuler ce rendez-vous" onclick="alert('Rendez-Vous annulé')">
       </div>
-
+    </form>
       </div>
 
         <div id="Recherche" ></div>

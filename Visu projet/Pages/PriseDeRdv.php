@@ -56,7 +56,6 @@
         <input type='hidden' name='idEleve' value='".$_SESSION['IdClientActuel']."'>";
       }
       ?>
-      <form method="get" action="">
         <table id="planning" style="width:100%">
             <tr style="text-align : center;width:80%">
                 <th style="width:16%;color :white">LUNDI</th>
@@ -167,7 +166,7 @@
                 }
                 ?>
         </table>
-        <input type='submit' style='width:100%' value="Confirmer le Rendez-vous">
+        <input type='submit' style='width:100%' value="Confirmer le Rendez-vous" onclick="alert('Rendez-Vous reservé. Redirection vers l\'accueil')">
         </form>
     </div>
 
