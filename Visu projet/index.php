@@ -125,47 +125,74 @@ session_start();
                
                <div id="Section"> 
                
-               <div id="Section6" > <ul> Lundi  </ul> 
-               <p style="font-size: 12px; font-style: italic; font-family:Arial;margin-right: 30%; padding-left: 12px"> 
+               <a href="https://www.webdo.tn/2022/05/28/tunisie-reforme-de-lenseignement-et-revision-des-programmes-et-des-manuels-scolaire/" >
+               <div id="Section6" style="background-image: url(Images/Lundi.jpg); background-size: 100% 180%;"  > <ul> Lundi  </ul> 
+               <p style="font-size: 12px; font-style: italic; font-family:Arial;margin-right: 12px; padding-left: 12px "> 
                
-                Le ramassage scolaire compte à ce jour 15.000 postes disponibles. L'éducation nationale peine à trouver des chauffeurs pour conduire les jeunes classes de province.
+               Le ministère de l’éducation  entamé, il y a quelques semaines, la révision des programmes éducatifs et des manuels scolaires qui datent de 2002,
+                la réforme du système éducatif étant devenue nécessaire de l’avis de tous. 
+                La révision des programmes sera ainsi au centre de réunions et séances de travail, 
+                prévues la semaine prochaine entre le ministère de l’éducation et l’Union générale tunisienne du travail 
                 
               </p>
-               <button style="margin-right: 10%; float: right" class="btn btn-light my-2 my-sm-0" type="submit">Voir l'article </button>
               </div>
-               <div id="Section6" > <ul > Mardi  </ul> 
-               <p style="font-size: 12px; font-family:Arial;margin-right: 40%; padding-left: 12px"> 
+              </a>
+
+              <a href="https://www.letudiant.fr/etudes/qui-sont-les-nouveaux-ministres-de-l-enseignement-superieur-et-de-l-education-nationale.html" >
+              <div id="Section6" style="background-image: url(Images/Mardii.jpg); background-size: 100% 150%;"  > <ul > Mardi  </ul> 
+               <p style="font-size: 12px; font-style: italic; font-family:Arial;margin-right: 12px; padding-left: 12px "> 
                
-               REDFGHVBJNK?LBVCFHHGJBNBHJGVHCFGHVBJKN?LJNBHGVCFHVJBKNL?JHGFCHVJBKNL?JHBGVCFHVBJKNLHGCFKH JHVJGVJGVHGV HVY 
+               Même si la politique peut sembler loin des préoccupations d'orientation, savoir qui occupe les ministères 
+               de l'Éducation nationale et de l'Enseignement supérieur peut avoir du sens... 
+               L'Etudiant vous présente les deux nouveaux ministres dont les décisions pourraient avoir un 
+               impact pour les élèves et étudiants.
               
               </p>
-               <button style="margin-right: 10%; float: right" class="btn btn-light my-2 my-sm-0" type="submit">Voir l'article </button>
-              </div>
-               <div id="Section6" > <ul > Mercredi  </ul> 
-               <p style="font-size: 12px; font-family:Arial;margin-right: 40%; padding-left: 12px"> 
+
+            </div>
+            </a>
+
+            <a href="https://www.letudiant.fr/etudes/btsdut/master-a-la-fac-ecole-d-ingenieurs-ou-de-commerce-quelle-poursuite-d-etudes-apres-un-but.html">
+            <div id="Section6" style="background-image: url(Images/Mercredi.jpg); background-size: 100% 150%;"  ><ul > Mercredi  </ul> 
+            <p style="font-size: 12px; font-style: italic; font-family:Arial;margin-right: 12px; padding-left: 12px "> 
                
-               REDFGHVBJNK?LBVCFHHGJBNBHJGVHCFGHVBJKN?LJNBHGVCFHVJBKNL?JHGFCHVJBKNL?JHBGVCFHVBJKNLHGCFKH JHVJGVJGVHGV HVY 
+               Le bachelor universitaire de technologie en trois ans gagne en reconnaissance grâce à son grade de licence. 
+               Un grade qui facilite la poursuite d’études longues notamment universitaires. Découvrez le champ des possibles
+                offert par ce nouveau diplôme.
               
               </p>
-               <button style="margin-right: 10%; float: right" class="btn btn-light my-2 my-sm-0" type="submit">Voir l'article </button>
               </div>
-               <div id="Section6" > <ul > Jeudi  </ul> 
-               <p style="font-size: 12px; font-family:Arial;margin-right: 40%; padding-left: 12px"> 
+              </a>
+
+
+              <a href="https://www.liberation.fr/societe/education/emmanuel-macron-veut-remettre-en-cause-la-quasi-gratuite-des-etudes-universitaires-20220114_SUZ3WMFW7ZARVDGJNJELYL3K7I/">
+              <div id="Section6" style="background-image: url(Images/Jeudi.jpg); background-size: 100% 165%;"  ><ul > Jeudi  </ul> 
+              <p style="font-size: 12px; font-style: italic; font-family:Arial;margin-right: 12px; padding-left: 12px "> 
                
-               REDFGHVBJNK?LBVCFHHGJBNBHJGVHCFGHVBJKN?LJNBHGVCFHVJBKNL?JHGFCHVJBKNL?JHBGVCFHVBJKNLHGCFKH JHVJGVJGVHGV HVY 
+               Emmanuel Macron veut remettre en cause l quasi-gratuité des études universitaires. 
+               Devant les présidents d’universités, le Président a esquissé les grandes lignes de ce que 
+               serait un deuxième quinquennat pour l’enseignement supérieur et la recherche : l’émergence 
+               d’établissements à l’américaine, et donc payants. 
               
               </p>
-              <a>
-               <button style="margin-right: 10%; float: right"  class="btn btn-light my-2 my-sm-0" type="submit">Voir l'article </button>
-              </a></div>
-               <div id="Section6" > <ul > Vendredi  </ul> 
-               <p style="font-size: 12px; font-family:Arial;margin-right: 40%; padding-left: 12px"> 
+              </div>
+              </a>
+
+              <a href="https://www.leparisien.fr/etudiant/orientation/ecoles/etudier-a-letranger-la-mobilite-reprend-doucement-TSM33BQRTBBP7AVRAIGXPWFORI.php">
+              <div id="Section6" style="background-image: url(Images/Vendredii.jpg); background-size: 100% 165%;"  ><ul > Vendredi  </ul> 
+              <p style="font-size: 12px; font-style: italic; font-family:Arial;margin-right: 12px; padding-left: 12px "> 
                
-               REDFGHVBJNK?LBVCFHHGJBNBHJGVHCFGHVBJKN?LJNBHGVCFHVJBKNL?JHGFCHVJBKNL?JHBGVCFHVBJKNLHGCFKH JHVJGVJGVHGV HVY 
+              Après plusieurs mois de difficulté et d’incertitude, le Covid n’a pas tari la soif de découvertes des étudiants.
+               Mais en attendant un vrai retour à la normale, beaucoup privilégient l’Europe. La mobilité reprend donc progressivement 
+               avec une certaine douceur. 
+
               
               </p>
-               <button style="margin-right: 10%; float: right" class="btn btn-light my-2 my-sm-0" type="submit">Voir l'article </button>
               </div>
+              </a>
+
+
+
                <div id="Section" style="color: #353535">  jvne /div>
                </div>
         </div>

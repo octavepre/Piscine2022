@@ -14,7 +14,7 @@
   <body>
     <div class="containerfluid" id="wrapper">    
     <?php require '../Header.html'; ?>    
-    <div id="Section2"> 
+    <div id="Section122"> 
       <ul>
         RELATION INTERNATIONNALE 
       </ul>

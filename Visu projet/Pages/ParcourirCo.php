@@ -18,7 +18,7 @@
         <div id="SectionParcour">
         <div class="Cadre">
 
-        <img style="opacity: 0.7" src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
+        <img style="opacity: 0.7" src="../Images/Enseignement.jpg" class="img_Parc" alt="Car1">
         <h4 class="titlePar1">ENSEIGNEMENT</h4>
         <a   id="btnParc1" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="EnseignantCo.php">Voir plus</a>
         <p style="margin-right: 30%; text-align: center; padding-top: 5%"> Le pôle enseignement vous accueil et son objectif est de vous conduire à l réussite. 
@@ -28,23 +28,23 @@
         </div>
         <div class="Cadre2">
                
-               <img  style="opacity: 0.7" src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc2" alt="Car1">
+        <img  style="opacity: 0.7" src="../Images/Recherche.jpg" class="img_Parc2" alt="Car1">
                <h4 class="titlePar2">RECHERCHE</h4>
                <a id="btnParc2" class="btn btn-outline-light my-2 my-sm-0" type="submit"href="Recherche.php">Voir plus</a>
-               <p style="margin-left: 30%; text-align: center; padding-top: 5%"> Le pôle enseignement vous accueil et son objectif est de vous conduire à l réussite. 
-                 Ne tardez pas et prenez rendez-vous avec eux pour en apprendre plus ! Au travers de cett section, vous pouvez 
-                 égalment chatter avec eux ou encore consulter leurs CV
+               <p style="margin-left: 30%; text-align: center; padding-top: 5%"> Vous souhaitez vous développer et devenir expert 
+                dans un domaine ? Alors le pôle  recherche est la pour vous aiguiller et vous faire trouver votre voix. 
+                Vous pouvez consulter les parcours de nos chercheurs ainsi que dialoguer avec eux. 
              </p>
            </div>
 
             <div class="Cadre">
                 
-                <img style="opacity: 0.7" src="../ImagesCaroussel/Img_car3.jpg" class="img_Parc" alt="Car1">
+            <img style="opacity: 0.7" src="../Images/RelationInter.jpg"  class="img_Parc" alt="Car1">
                 <h4 class="titlePar1">RELATIONS INTERNATIONALES</h4>
                 <a id="btnParc3" class="btn btn-outline-light my-2 my-sm-0" type="submit" href="RelationInter.php">Voir plus</a>
-                <p style="margin-right: 30%; text-align: center; padding-top: 5%"> Le pôle enseignement vous accueil et son objectif est de vous conduire à l réussite. 
-                  Ne tardez pas et prenez rendez-vous avec eux pour en apprendre plus ! Au travers de cett section, vous pouvez 
-                  égalment chatter avec eux ou encore consulter leurs CV
+                <p style="margin-right: 30%; text-align: center; padding-top: 5%"> Partir étudier à l’étranger est un rêve que de plus 
+                en plus d’étudiants expérimentent. Pourquoi pas vous ? Venez rencontrer le pôle internationale qui 
+                sera vous présenter les avantages de découvrir de nouvelles terres d’études. Le voyage vous tend les bras…
               </p>
             </div>
         </div>
