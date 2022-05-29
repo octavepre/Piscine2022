@@ -37,7 +37,7 @@
                 <img style="opacity: 0.6" src="../Images/Maths.jpg" class="d-block w-100" alt="Car2">
                 <div id="Caroussel_text">
                     <h1> Mathématiques pour l’ingénierie </h1>
-                    <a class="btn btn-light my-2 my-sm-0" href="SIC.php">Voir plus</a>
+                    <a class="btn btn-light my-2 my-sm-0" href="MPI.php">Voir plus</a>
                 </div>
               </div>
               <div class="carousel-item" data-interval="5000">
