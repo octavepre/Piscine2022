@@ -74,25 +74,23 @@ if (!$conn) {
           </div>
           
         
-        <div id="Section">
-          <a href="ADMIN/Modif.php">
+        <div id="Section" style="text-align : center ; padding:20px">
+          <a class="btn btn-light my-2 my-sm-0" href="ADMIN/Modif.php" style="margin-top : 20px; width : 250px">
             Modifier un intervenant
-          </a>
-          <br><br>
+          </a><br><br>
 
-          <a href="ADMIN/Ajout.php">
+          <a class="btn btn-light my-2 my-sm-0" href="ADMIN/Ajout.php" style="margin-top : 20px; width : 250px">
             Ajouter un intervenant
-          </a>
-          <br><br>
+          </a><br><br>
 
-          <a href="ADMIN/Supp.php">
+          <a class="btn btn-light my-2 my-sm-0" href="ADMIN/Supp.php" style="margin-top : 20px; width : 250px">
             Supprimer un intervenant
-          </a>
-          <br><br>
+          </a><br>
         </div>
 
                 
     </div>
+    <div style="height : 30px"></div>
 
     <?php require '../Footer.html'; ?>
     <!-- Optional JavaScript -->
