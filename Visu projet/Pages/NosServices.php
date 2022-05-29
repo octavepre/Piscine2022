@@ -13,7 +13,6 @@
 
   <body>
     <div class="containerfluid" id="wrapper">
-      
     <?php require '../Header.html'; ?>
 
         
@@ -26,51 +25,28 @@
 
 
         
-        <div id="Section4" class="gauche"> <ul class="text3"> Universites Partenaires  </ul>
-
-        <p style="font-style: italic; color: grey; text-align: center"> Découvrez nos universités partenaires ! </p>
-
-            <div id="btnParc5">
-            <a   class="btn btn-outline-light my-2 my-sm-0" type="submit"> Voir plus
-            </a>
-            </div>
-        
+        <div id="Section4" class="gauche"> 
+            <ul class="text3"> Universites Partenaires</ul>
+            <p style="font-style: italic; color: grey; text-align: center"> Découvrez nos universités partenaires ! </p>
+        </div>     
+        <div id="Section4" class="gauche"> 
+            <ul class="text3"> Double Diplome à l'Internationnale </ul> 
+            <p style="font-style: italic; color: grey; text-align: center"> Enrichissez votre CV en perfectionnant votre communication internationale ! </p>
         </div>
-        <div id="Section4" class="gauche"> <ul class="text3"> Double Diplome à l'Internationnale </ul> 
-        <p style="font-style: italic; color: grey; text-align: center"> Enrichissez votre CV en perfectionnant 
-        votre communication internationale ! </p>
-        
-            <div id="btnParc5">
-                <a   class="btn btn-outline-light my-2 my-sm-0" type="submit"> Voir plus
-                </a>
-                </div>
-
+        <div id="Section4" class="gauche"> 
+            <ul class="text3"> Apprentissage des langues  </ul> 
+            <p style="font-style: italic; color: grey; text-align: center"> Vous avez toujours rêvez d’apprendre une autre langue ? Lancez-vous ! </p>
         </div>
-        <div id="Section4" class="gauche"> <ul class="text3"> Apprentissage des langues  </ul> 
-        <p style="font-style: italic; color: grey; text-align: center"> Vous avez toujours rêvez d’apprendre 
-        une autre langue ? Lancez-vous ! </p>
-        
-            <div id="btnParc5">
-                <a   class="btn btn-outline-light my-2 my-sm-0" type="submit"> Voir plus
-                </a>
-                </div>
 
-        </div>
-        <div id="Section5" > 
-            
-            <ul class="text4"> Summer School </ul> 
+        <div id="Section5" >       
+            <ul class="text4"> Summer School </ul> <br><br><br><br>
             <p style="font-style: italic; color: grey; text-align: center"> Passez votre été à l’étranger sera votre clé vers la réussite linguistique </p>
-            
-        
-            <div id="btnParc6">
-                <a   class="btn btn-outline-light my-2 my-sm-0" type="submit"> Voir plus
-                </a>
-            </div>
-
         </div>
 
         
-        <div id="Section" > </div>
+        <div id="Section" > 
+
+        </div>
 
         <?php require '../Footer.html'; ?>
   </div>

@@ -22,13 +22,13 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <ul>
-                <li> <a class="nav-item nav-link" href="../Pages/connecté.php">Accueil
+                <li> <a class="nav-item nav-link" href="../Pages/connectéprof.php">Accueil
                  <span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <a class="nav-item nav-link" href="../Pages/ParcourirCo.php">Parcourir</a>
+                  <a class="nav-item nav-link" href="../Pages/ParcourirProf.php">Parcourir</a>
                 </li >
               </ul>
               <ul>
@@ -41,7 +41,7 @@
               
               <!--<a class="nav-item nav-link disabled" href="#">Disabled</a>-->
               <ul>
-              <form class="form-inline" action="ChercherCo.php" method="post">
+              <form class="form-inline" action="ChercherProf.php" method="post">
                  <input class="form-control mr-sm-2" type="text" placeholder="Nom ou specialite" name="chercher">
                  <button class="btn btn-outline-light my-2 my-sm-0" type="submit" name="login">Recherche</button>
                 </form>

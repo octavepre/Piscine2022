@@ -14,7 +14,7 @@
   <body>
     <div class="containerfluid" id="wrapper">
       
-        <?php require '../Header.html'; ?> 
+        <?php require '../HeaderCoProf.php'; ?> 
 
         <div id="Recherche" > 
                 <ul>
@@ -30,21 +30,21 @@
                 <img style="opacity: 0.6" src="../Images/SystemeIntCom.jpg" class="d-block w-100" alt="Car1">
                 <div id="Caroussel_text">
                     <h1> Systèmes Intelligents Communicants </h1>
-                  <a class="btn btn-light my-2 my-sm-0" href="SIC.php">Voir plus</a>
+                    <a class="btn btn-light my-2 my-sm-0" href="SICProf.php">Voir plus</a>
                 </div>
               </div>
               <div class="carousel-item" data-interval="5000">
                 <img style="opacity: 0.6" src="../Images/Maths.jpg" class="d-block w-100" alt="Car2">
                 <div id="Caroussel_text">
                     <h1> Mathématiques pour l’ingénierie </h1>
-                    <a class="btn btn-light my-2 my-sm-0" href="MPI.php">Voir plus</a>
+                    <a class="btn btn-light my-2 my-sm-0" href="MPIProf.php">Voir plus</a>
                 </div>
               </div>
               <div class="carousel-item" data-interval="5000">
                 <img style="opacity: 0.6" src="../Images/nanotech.jpg" class="d-block w-100" alt="Car3">
                 <div id="Caroussel_text">
                     <h1> Nanoscience et nanotechnologie pour l’ingénierie </h1>
-                    <a class="btn btn-light my-2 my-sm-0" href="NNI.php">Voir plus</a>
+                    <a class="btn btn-light my-2 my-sm-0" href="NNIProf.php">Voir plus</a>
                 </div>
               </div>
             </div>
@@ -62,8 +62,9 @@
 
           <div id="Recherche" ></div>
 
-          <?php require '../Footer.html'; ?>
           
+        </div>
+        <?php require '../Footer.html'; ?>
       </div>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

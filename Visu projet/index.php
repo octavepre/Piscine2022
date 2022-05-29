@@ -77,8 +77,7 @@ session_start();
               <img style="opacity: 0.6" src="ImagesCaroussel/Img_car3.jpg" class="d-block w-100" alt="Car1">
               <div id="Caroussel_text">
             <h1> Découvrir nos enseignants </h1>
-              <a  href="Enseigant.php">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
+            <a class="btn btn-dark my-2 my-sm-0" href="Pages/Enseignant.php">Voir plus</a>
             </a>
           </div>
             </div>
@@ -87,7 +86,7 @@ session_start();
               <div id="Caroussel_text">
             
             <h1> Partir étudier à l'étranger ? </h1>
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
+            <a class="btn btn-dark my-2 my-sm-0" href="Pages/RelationInter.php">Voir plus</a>
           </div>
             </div>
             <div class="carousel-item" data-interval="5000">
@@ -95,7 +94,7 @@ session_start();
               <div id="Caroussel_text">
             
               <h1> Trouver votre spécilaité ? </h1>
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
+            <a class="btn btn-dark my-2 my-sm-0" href="Pages/Recherche.php">Voir plus</a>
           </div>
             </div>
           </div>

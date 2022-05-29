@@ -19,13 +19,28 @@
         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-interval="5000">
-              <img src="../ImagesCaroussel/Img_car3.jpg" class="d-block w-100" alt="Car1">
+              <img style="opacity: 0.6" src="../ImagesCaroussel/Img_car3.jpg" class="d-block w-100" alt="Car1">
+              <div id="Caroussel_text">
+            <h1> Découvrir nos enseignants </h1>
+            <a class="btn btn-dark my-2 my-sm-0" href="EnseignantCo.php">Voir plus</a>
+            </a>
+          </div>
             </div>
             <div class="carousel-item" data-interval="5000">
-              <img src="../ImagesCaroussel/Img_car1.jpg" class="d-block w-100" alt="Car2">
+              <img style="opacity: 0.6" src="../ImagesCaroussel/Img_car1.jpg" class="d-block w-100" alt="Car2">
+              <div id="Caroussel_text">
+            
+            <h1> Partir étudier à l'étranger ? </h1>
+            <a class="btn btn-dark my-2 my-sm-0" href="RelationInterCo.php">Voir plus</a>
+          </div>
             </div>
             <div class="carousel-item" data-interval="5000">
-              <img src="../ImagesCaroussel/Img_car2.jpg" class="d-block w-100" alt="Car3">
+              <img style="opacity: 0.6" src="../ImagesCaroussel/Img_car2.jpg" class="d-block w-100" alt="Car3">
+              <div id="Caroussel_text">
+            
+              <h1> Trouver votre spécilaité ? </h1>
+            <a class="btn btn-dark my-2 my-sm-0" href="RechercheCo.php">Voir plus</a>
+          </div>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -35,10 +50,7 @@
           <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a>
-          <div id="Caroussel_text">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Voir plus</button>
-          </div>
+          </a>     
         </div>
         
         <div id="Section">
