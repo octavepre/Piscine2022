@@ -104,7 +104,7 @@ if($data = mysqli_fetch_assoc($result)) {
                     <div class="form-outline form-white mb-4">
                       <input type="text" id="nom" class="form-control form-control-lg" placeholder="NOM..." name="nom" value=<?php echo $_SESSION['ModifNom'] ?>>
                       <label class="form-label" for="nom">Nom</label>
-                      <input type="text" id="prenom" class="form-control form-control-lg" placeholder="Prénom..." name="prenom_inter" name="prenom" value=<?php echo $_SESSION['ModifPrenom'] ?>>
+                      <input type="text" id="prenom" class="form-control form-control-lg" placeholder="Prénom..." name="prenom" value=<?php echo $_SESSION['ModifPrenom'] ?>>
                       <label class="form-label" for="prenom">Prenom</label>
                     </div>
 
